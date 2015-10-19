@@ -1,4 +1,5 @@
 # 1. Übungsblatt (ungeprüft)
+Aufgabenblatt: (http://fuzzy.cs.uni-magdeburg.de/wiki/uploads/Lehre.IS1516/is2015_ue01.pdf)
 ## 1.1 Der Touring Test
 _Quelle:_ (http://www.beneu.de/privat/archiv/turing/tur2.html)
 ### Was ist das Imitationsspiel?
