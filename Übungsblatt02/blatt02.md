@@ -54,4 +54,4 @@ Beweis unter Punkt 2.4.2 im Dokument: http://student.cosy.sbg.ac.at/~vhorak/Bakk
  $$ f(a,b) = (1-a) + b $$
 
  * exklusive Disjunktion:
- $$ f(a,b) = (1-a) * (1-b) $$
+ $$ f(a,b) = (1-a)*b + a*(1-b) $$
