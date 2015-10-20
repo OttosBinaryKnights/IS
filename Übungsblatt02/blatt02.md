@@ -18,8 +18,20 @@
 ### a) Zeigen Sie, dass die aus den Operationen Konjunktion, Disjunktion und Negation bestehende Operationenmenge {∧,∨,¬} eine Verknüpfungsbasis (oder vollständige Operationenmenge) ist, d.h., dass alle Funktionen {0,1}n → {0,1} mit den Operationen dieser Menge konstruiert werden können!
 ### b) Zeigen Sie, dass die nur aus der Peircefunktion (NOR) bestehende Operationenmenge {↓} eine Verknüpfungsbasis ist!
 Beweis unter Punkt 2.4.1 im Dokument: http://student.cosy.sbg.ac.at/~vhorak/Bakk-Arbeit/MathSem.pdf
+Beweis: Es genügt zu zeigen, dass sich {∧,∨,¬} durch {↓} darstellen lassen.
+
+ ¬: ¬A = ¬(A∨A) = A↓A
+ ∨: A∨B = (A∨B)∧(A∨B) = ¬¬((A∨B)∧(A∨B)) = ¬(¬(A∨B)∨¬(A∨B)) = ¬((A↓B)∨(A↓B)) = (A↓B)↓(A↓B) 
+ ∧: A∧B = ¬¬(A∧B) = ¬(¬A∨¬B) = ¬A↓¬B = (A↓A)↓(B↓B)
+ 
 ### c) Zeigen Sie, dass die nur aus der Shefferfunktion (NAND) bestehende Operationenmenge {↑} eine Verknüpfungsbasis ist!
+Beweis: Es genügt zu zeigen, dass sich {∧,∨,¬} durch {↑} darstellen lassen.
 Beweis unter Punkt 2.4.2 im Dokument: http://student.cosy.sbg.ac.at/~vhorak/Bakk-Arbeit/MathSem.pdf
+
+ ¬: ¬A = ¬(A∧A) = A↑A
+ ∧: A∧B = (A∧B)∨(A∧B) = ¬¬((A∧B)∨(A∧B)) = ¬(¬(A∧B)∧¬(A∧B)) = ¬((A↑B)∧(A↑B)) = (A↑B)↑(A↑B) 
+ ∨: A∨B = ¬¬(A∨B) = ¬(¬A∧¬B) = ¬A↑¬B = (A↑A)↑(B↑B)
+ 
 ### d) Zeigen Sie, dass die aus den Operationen Implikation und Negation bestehende Opera- tionenmenge {→, ¬} eine Verknüpfungsbasis ist!
 
 ---
