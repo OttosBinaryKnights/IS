@@ -9,10 +9,10 @@ Fragesteller C muss herausfinden welcher seiner beiden "Chatpartner" (A und B) w
 Bei Touring wird ein Chatpartner A durch eine Maschine ersetzt, die versucht das der Fragesteller die Maschine für den menschlichen Chatpartner
 
 ### Wann besteht ein Rechner/Programm den Turing-Test?
-Wenn der Fragesteller mit gleicher Häufigkeit die Maschine für menschlich hält, mit der er den menschlichen Chatpartnern das falsche Geschlecht zuordnete.
+Wenn der Fragesteller mit midestens gleicher Häufigkeit die Maschine für menschlich hält, mit der er den menschlichen Chatpartnern das falsche Geschlecht zuordnete.
 
 ### Gibt es bereits Rechner/Programme, die den Turing-Test bestehen?
-Nein. Loebner-Preis wurde noch nicht verliehen. (Silbermedaille - erweiterter Test Goldmedaille)
+Nein. Loebner-Preis wurde noch nicht verliehen. (gäbe die Silbermedaille - erweiterter Test für Goldmedaille)
 
 ---
 ## 1.2 Weizenbaums ELIZA
@@ -38,7 +38,7 @@ In einem Raum sitzt ein Person und erhält durch einen Schlizt eine Geschichte u
 Der draußen stehende Muttersprachler, der ihm die Geschichte und Fragen zusteckte kommt hierbei zum dem Schluss das innen ebenfalls jemand sitzen müsse, der Chinesisch spricht.
 
 ### Wofür/Wogegen wird es als Argument benutzt?
-Es soll beweisen, dass ein Computer nicht allein dadurch Bewusstsein erlangt, indem es ein passendes Programm ausführt.
+Es soll beweisen, dass ein Computer **nicht** allein dadurch Bewusstsein erlangt, indem es ein passendes Programm ausführt.
 
 ### In welchem Zusammenhang steht es mit dem Turing-Test?
- Autor wollte zeigen, dass Bestehendes Turing-Test für eine Rechenmaschine nicht ausreicht um als Intelligent zu gelten. Die Maschine erscheint nur intelligent
+ Autor wollte zeigen, dass das Bestehen des Turing-Test für eine Rechenmaschine nicht ausreicht um als Intelligent zu gelten. Die Maschine **erscheint** nur intelligent
