@@ -50,14 +50,45 @@ $
 **Der schon in Aufgabe 4 betrachtete S-R-Agent aus der Vorlesung werde wie folgt verändert: Statt der Aktionen „Gehe nach Norden, Osten, Süden, Westen“ stehen dem Agenten die Aktionen „Gehe vorwärts“ (in Richtung des Sensors s2), „Drehe nach links“ (um 90° gegen den Uhrzeigersinn) und „Drehe nach rechts“ (um 90° im Uhrzeigersinn) zur Verfügung.**
 * a) Geben Sie ein Regelsystem an, das den Agenten den Umriss des Raumes oder den Umriss eines im Raum stehenden Gegenstandes abfahren lässt! Setzen Sie dabei voraus, dass es keine „engen Zwischenräume“ gibt.
 
+ $
+\begin{matrix}
+ & s_1 &            & s_2          &             & s_3  \\
+ &     & \nwarrow   & \uparrow     & \nearrow    &      \\
+ & s_8 & \leftarrow & \blacksquare & \rightarrow & s_4  \\
+ &     & \swarrow   & \downarrow   & \searrow    &      \\
+ & s_7 &            & s_6          &             & s_5
+\end{matrix}
+$
+
+ $x_1 = 1 \leftrightarrow s_2 = 1$ (Weg versperrt)
+
+ $x_2 = 1 \leftrightarrow s_4 = 1 \lor s_8 = 1$ (neben Wand / Objekt)
+
+ $x_3 = 1 \leftrightarrow s_5 = 1 \lor s_6 = 1 \lor s_7 = 1$ (von Wand / Objekt abgewandt)
+
+ $x_4 = 1 \leftrightarrow s_8 = 1 \lor s_7 = 1$ (rechts von Wand / Objekt)
+
+ Mit diesen Zwischengrößen lassen sich die Regeln folgendermaßen formulieren:
+
+ $x_1 = 1 \land x_4 = 1 \rightarrow links$
+
+ $x_1 = 1 \rightarrow rechts$
+
+ $x_2 = 0 \land x_4 = 1 \rightarrow links$
+
+ $x_2 = 0 \land x_3 = 1 \rightarrow rechts$
+
+ $1 \rightarrow vorw\ddot{a} rts$
+
 
 * b) Kann man ein Regelsystem angeben, das den Agenten in die Lage versetzt, seine Aufgabe auch dann zu erfüllen, wenn es „enge Zwischenräume“ gibt? Begründen Sie Ihre Antwort!
 
+ Wie in Aufgabe 1 kann der Agent seine Aufgabe nur dann erfüllen, wenn er über ein Gedächtnis verfügt, also kein reiner S-R-Agent mehr ist.
 ---
 ## Aufgabe 6 Boolesche Algebra
-* a) Zeigen Sie, dass die aus den Operationen Konjunktion, Disjunktion und Negation bestehende Operationenmenge $\{\land ,\lor ,\neg \}$ eine Verknüpfungsbasis (oder vollständige Operationenmenge) ist, d.h., dass alle Funktionen $\{0,1\}n \rightarrow \{0,1\}$ mit den Operationen dieser Menge konstruiert werden können!
+* a) Zeigen Sie, dass die aus den Operationen Konjunktion, Disjunktion und Negation bestehende Operationenmenge $\{\land ,\lor ,\neg \}$ eine Verknüpfungsbasis (oder vollständige Operationenmenge) ist, d.h., dass alle Funktionen $\{0,1\}^n \rightarrow \{0,1\}$ mit den Operationen dieser Menge konstruiert werden können!
 
-Jede boolsche Funktion lässt sich in KNF und DNF darstellen. Da in diesen Normalformen nur die Operationen Konjunktion, Disjunktion und verwendet werden, ist die aus diesen Funktionen bestehende Menge eine Verknüpfungsbasis.
+ Jede boolsche Funktion lässt sich in KNF und DNF darstellen. Da in diesen Normalformen nur die Operationen Konjunktion, Disjunktion und verwendet werden, ist die aus diesen Funktionen bestehende Menge eine Verknüpfungsbasis.
 
 * b) Zeigen Sie, dass die nur aus der Peircefunktion (NOR) bestehende Operationenmenge $\{\downarrow\}$ eine Verknüpfungsbasis ist!
 Beweis unter Punkt 2.4.1 im Dokument: http://student.cosy.sbg.ac.at/~vhorak/Bakk-Arbeit/MathSem.pdf
