@@ -76,7 +76,7 @@ $
 \end{matrix}
 $
 
-### DIESE REGEL FÜHRT WRSL ZU EINER ENDLOSSCHLEIFE 
+### DIESE REGEL FÜHRT WRSL ZU EINER ENDLOSSCHLEIFE
 
  $x_1 = 1 \leftrightarrow s_2 = 1 \lor s_3=1$
 
@@ -97,6 +97,28 @@ $
  $x_1 = 1 \land x_2 = 0 \land x_4 = 0 \rightarrow \text{"Drehe nach rechts"}$
 
  $x_1 = 0 \land x_2 = 0 \land x_3 = 0 \land x_4 = 0 \rightarrow \text{"Gehe vorwaerts"}$
+
+ ---
+
+ ---
+ *Alternative Lösung*
+
+ $x_1 = 1 \leftrightarrow s_2 = 1$ (Weg versperrt)
+
+ $x_2 = 1 \leftrightarrow s_1 = 1 \lor s_8 = 1$ (Wand links oder linksvorne)
+
+ $x_3 = 1 \leftrightarrow s_1 = 0 \lor s_8 = 0 \lor s_7 = 1$ (Wand hintenlinks)
+
+ Mit diesen Zwischengrößen lassen sich die Regeln folgendermaßen formulieren:
+
+
+ $x_1 = 1 \rightarrow rechts$
+
+ $x_2 = 1 \rightarrow$ vorwärts
+
+ $x_3 = 1 \rightarrow links$
+
+ ($1 \rightarrow$ vorwärts)
 
 
 **b) Kann man ein Regelsystem angeben, das den Agenten in die Lage versetzt, seine Aufgabe auch dann zu erfüllen, wenn es „enge Zwischenräume“ gibt? Begründen Sie Ihre Antwort!**
