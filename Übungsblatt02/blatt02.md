@@ -76,27 +76,27 @@ $
 \end{matrix}
 $
 
-### DIESE REGEL FÜHRT WRSL ZU EINER ENDLOSSCHLEIFE [sh. Issue #8](https://github.com/OttosBinaryKnights/IS/issues/8)
+### DIESE REGEL FÜHRT WRSL ZU EINER ENDLOSSCHLEIFE 
 
- $x_1 = 1 \leftrightarrow s_2 = 1$ (Weg versperrt)
+ $x_1 = 1 \leftrightarrow s_2 = 1 \lor s_3=1$
 
- $x_2 = 1 \leftrightarrow s_4 = 1 \lor s_8 = 1$ (neben Wand / Objekt)
+ $x_2 = 1 \leftrightarrow s_4 = 1 \lor s_5 = 1$
 
- $x_3 = 1 \leftrightarrow s_5 = 1 \lor s_6 = 1 \lor s_7 = 1$ (von Wand / Objekt abgewandt)
+ $x_3 = 1 \leftrightarrow s_6 = 1 \lor s_7 = 1$
 
- $x_4 = 1 \leftrightarrow s_8 = 1 \lor s_7 = 1$ (rechts von Wand / Objekt)
+ $x_4 = 1 \leftrightarrow s_8 = 1 \lor s_1 = 1$
 
  Mit diesen Zwischengrößen lassen sich die Regeln folgendermaßen formulieren:
 
- $x_1 = 1 \land x_4 = 1 \rightarrow links$
+ $x_1 = 1 \land x_4 = 1 \rightarrow \text{"Drehe nach rechts"}$
 
- $x_1 = 1 \rightarrow rechts$
+ $x_1 = 0 \land x_4 = 1 \rightarrow \text{"Gehe vorwaerts"}$
 
- $x_2 = 0 \land x_4 = 1 \rightarrow links$
+ $x_1 = 0 \land x_3 = 1 \land x_4 = 0 \rightarrow \text{"Drehe nach links"}$
 
- $x_2 = 0 \land x_3 = 1 \rightarrow rechts$
+ $x_1 = 1 \land x_2 = 0 \land x_4 = 0 \rightarrow \text{"Drehe nach rechts"}$
 
- $1 \rightarrow vorw\ddot{a} rts$
+ $x_1 = 0 \land x_2 = 0 \land x_3 = 0 \land x_4 = 0 \rightarrow \text{"Gehe vorwaerts"}$
 
 
 **b) Kann man ein Regelsystem angeben, das den Agenten in die Lage versetzt, seine Aufgabe auch dann zu erfüllen, wenn es „enge Zwischenräume“ gibt? Begründen Sie Ihre Antwort!**
