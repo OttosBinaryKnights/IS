@@ -131,6 +131,9 @@ $
 
  Jede boolsche Funktion lässt sich in KNF und DNF darstellen. Da in diesen Normalformen nur die Operationen Konjunktion, Disjunktion und verwendet werden, ist die aus diesen Funktionen bestehende Menge eine Verknüpfungsbasis.
 
+Noch zu zeigen, dass mehrstellige Operationen (n>2) auch durch die Operationsmenge darzustellen ist. 
+Dazu einfach einsetzen f(a1, f(a2, a3)). 
+
 **b) Zeigen Sie, dass die nur aus der Peircefunktion (NOR) bestehende Operationenmenge $\{\downarrow\}$ eine Verknüpfungsbasis ist!**
 
 Beweis unter Punkt 2.4.1 im Dokument: http://student.cosy.sbg.ac.at/~vhorak/Bakk-Arbeit/MathSem.pdf
