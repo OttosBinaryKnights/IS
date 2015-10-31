@@ -189,13 +189,16 @@ Beweis unter Punkt 2.4.2 im Dokument: http://student.cosy.sbg.ac.at/~vhorak/Bakk
  $$ f(a,b) = a*b = ab $$
 
  * Disjunktion:
- $$ f(a,b) = a + b $$
+ $$ f(a,b) = \neg (\neg a \land \neg b) = 1 - ((1-a)*(1-b)) = 1- (1-b-a+ab) = b+a-ab $$
 
  * Negation:
  $$ f(a) = 1 - a $$
 
  * Implikation (a → b):
- $$ f(a,b) = (1-a) + b $$
+ $$ f(a,b) = \neg a \lor b = (1-a) + b -(1-a)*b = 1-a+b-b+ab = 1-a+ab $$
 
  * exklusive Disjunktion:
- $$ f(a,b) = (1-a)*b + a*(1-b) $$
+ $$ f(a,b) = (a \lor b) \land \neg (a\land b) = (a+b - ab) * (1-ab) = a+b-ab-a^2b-ab^2 + a^2b^2 $$
+Da a,b element aus {0,1} ist a^2=a und b^2 = b daraus folgt
+$$ a+b-ab-ab-ab+ab = a+b-2ab $$
+
