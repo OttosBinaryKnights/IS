@@ -9,18 +9,45 @@ Bestimmen Sie die Gewichte und den Schwellenwert einzelner Schwellenwertelemente
 
  * b) $\neg x_1 \lor (\neg x_2 \land x_3)$
  Wahheitstabelle:
-| $x_1$   |  $x_2$  |  $x_3$  |  $\neg x_1$  |  $\neg x_2$  |  $\neg x_2 \land x_3$  |  f  |
-|:-------:|:-------:|:-------:|:------------:|:------------:|:----------------------:|:---:|
-| 0       | 0       | 0       | 1            | 1            | 0                      | 1   |
-| 0       | 0       | 1       | 1            | 1            | 1                      | 1   |
-| 0       | 1       | 0       | 1            | 0            | 0                      | 1   |
-| 0       | 1       | 1       | 1            | 0            | 0                      | 1   |
-| 1       | 0       | 0       | 0            | 1            | 0                      | 0   |
-| 1       | 0       | 1       | 0            | 1            | 1                      | 1   |
-| 1       | 1       | 0       | 0            | 0            | 0                      | 0   |
-| 1       | 1       | 1       | 0            | 0            | 0                      | 0   |
+ $\begin{array}(c|c|c|c|c|c|c)
+ x_1 & x_2 & x_3 & \neg x_1 & \neg x_2 & \neg x_2 \land x_3 & f \\
+\hline
+ 0     & 0     & 0     & 1          & 1          & 0                    & 1 \\
+ 0     & 0     & 1     & 1          & 1          & 1                    & 1 \\
+ 0     & 1     & 0     & 1          & 0          & 0                    & 1 \\
+ 0     & 1     & 1     & 1          & 0          & 0                    & 1 \\
+ 1     & 0     & 0     & 0          & 1          & 0                    & 0 \\
+ 1     & 0     & 1     & 0          & 1          & 1                    & 1 \\
+ 1     & 1     & 0     & 0          & 0          & 0                    & 0 \\
+ 1     & 1     & 1     & 0          & 0          & 0                    & 0
+ \end{array}$
+
+ $\begin{matrix}
+(0;0;0) & (0;1;1) &  & A(\frac 12;1;0) \\
+(0;0;1) & (1;0;1) &  & B(1;\frac 12;1) \\
+(0;1;0) &         &  & C(1;0;\frac 12)
+\end{matrix}$
+![img](img1.2.1.jpg)
+
+ $(x-A)\cdot [(C-A)\times (B-A)]=0$
+ $\vec x - \begin{pmatrix} \frac 12 \\ 1 \\ 0 \end{pmatrix} \cdot \Biggl[\biggl(\begin{pmatrix} 1 \\ 0 \\ \frac 12 \end{pmatrix} - \begin{pmatrix} \frac 12 \\ 1 \\ 0 \end{pmatrix}\biggl) \times \biggl(\begin{pmatrix} 1 \\ \frac 12 \\ 1 \end{pmatrix} - \begin{pmatrix} \frac 12 \\ 1 \\ 0 \end{pmatrix}\biggl)\Biggl] = 0$
+
+ $\vec x - \begin{pmatrix} \frac 12 \\ 1 \\ 0 \end{pmatrix} \cdot \Biggl[\begin{pmatrix} \frac 12 \\ -1 \\ \frac 12 \end{pmatrix} \times \begin{pmatrix} \frac 12 \\ -\frac 12 \\ 1 \end{pmatrix}\Biggl] = 0$
+
+ $\vec x - \begin{pmatrix} \frac 12 \\ 1 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} -\frac 34 \\ -\frac 14 \\ \frac 14 \end{pmatrix} = 0$
+
+ $-\frac 34 x_1 + \frac 38 - \frac 14 x_2 + \frac 14 + \frac 14 x_3 =0$
+ $-6x_1+3-2x_2+2+2x_3=0$
+ $-6x_1-2x_2+2x_3+5=0$
+ ![img](img1.2.2.jpg)
 
  * c) $(\neg x_1 \lor x_2)\land (\neg x_2 \lor x_3)$
+ Wahrheitstabelle
+![Wertetabelle](Wertetabelle.jpg)
+
+$(0;0;0);(0;0;1);(0;1;1);(1;1;1)$
+Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen lässt. 
+
  * d) $\neg (x_1 \land x_2)\land \neg x_3$
 
  ---
