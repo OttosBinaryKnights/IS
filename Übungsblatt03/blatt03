@@ -1,0 +1,28 @@
+# 3. Übungsblatt
+## Aufgabe 8 Schwellenwertelemente
+
+Bestimmen Sie die Gewichte und den Schwellenwert einzelner Schwellenwertelemente (kein Netz von Schwellenwertelementen), sodass sie die folgenden Booleschen Funktionen berechnen:
+ * a) $x_1 \land x_2 \land \neg x_3$
+ * b) $\neg x_1 \lor (\neg x_2 \land x_3)$
+ * c) $(\neg x_1 \lor x_2)\land (\neg x_2 \lor x_3)$
+ * d) $\neg (x_1 \land x_2)\land \neg x_3$
+
+ ---
+
+## Aufgabe 9 Schwellenwertelemente
+Gegeben sei eine Menge von Punkten in einem zweidimensionalen Raum (also Punkte in einer Ebene). Für eine festgelegte Teilmenge dieser Punkte soll ein Schwellenwertelement eine Ausgabe von 1 erzeugen, für die übrigen eine Ausgabe von 0.
+ * a) Unter welchen Bedingungen kann ein Schwellenwertelement diese Aufgabe lösen?
+ * b) Wenn die Aufgabe lösbar ist: Ist sie eindeutig lösbar? D.h.: Gibt es einen eindeutigen SatzvonGewichtenundeineneindeutigenSchwellenwert, sodassdieAufgabegelöstwird? Wenn nicht: Welche Variationsmöglichkeiten gibt es?
+ * c) Wie könnte man in natürlicher Weise eine „beste“ Lösung der Aufgabe deﬁnieren?
+
+  ---
+
+## Aufgabe 10 Netze von Schwellenwertelementen
+ * a) Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte $(x_1,x_2)$ innerhalb des in der nebenstehenden Skizze gezeigten Dreiecks denWert 1 undfür Punkte außerhalb den Wert 0 liefert!
+ * b) Es soll innerhalb eines Gebietes der $x_1-x_2-$Ebene, das durch ein Polygon begrenzt, aber nicht konvex ist, die Ausgabe 1, und außerhalb die Ausgabe 0 erzeugt werden. Welches ProblemkannindiesemFallimVergleichzudemobenbetrachteten Dreieck auftreten? Wie kann man dieses Problem lösen?
+ ![Graph](Graph.jpg)
+
+ ---
+
+## Aufgabe 11 Berechnungsfähigkeiten von Netzen von Schwellenwertelementen
+Kann man ein Netz aus Schwellenwertelementen angeben, das für Punkte innerhalb eines Kreises mit Radius 1 um den Ursprung die Ausgabe 1 und außerhalb die Ausgabe 0 liefert? Wenn ja, skizzieren Sie dieses Netz! Wenn nein, geben Sie ein Prinzip an, wie man ein Netz bestimmen kann, das eine Näherungslösung liefert!
