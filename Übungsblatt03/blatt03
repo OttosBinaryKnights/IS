@@ -45,10 +45,25 @@ Bestimmen Sie die Gewichte und den Schwellenwert einzelner Schwellenwertelemente
  Wahrheitstabelle
 ![Wertetabelle](Wertetabelle.jpg)
 
-$(0;0;0);(0;0;1);(0;1;1);(1;1;1)$
-Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen lässt. 
+ $(0;0;0);(0;0;1);(0;1;1);(1;1;1)$
+Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen lässt.
 
  * d) $\neg (x_1 \land x_2)\land \neg x_3$
+ ![Wertetabelle](Wertetabelle2.jpg)
+ $(0;0;0);(0;1;0);(1;0;0)$
+ ![img](img1.4.1.jpg)
+
+ $A(0;0;\frac12);B(1;\frac 12;0);C(\frac 12; 1;0)$
+
+ $(x-A)\cdot [(C-A)\times (B-A)]=0$
+ $\vec x - \begin{pmatrix} 0 \\ 0 \\ \frac 12 \end{pmatrix} \cdot \Biggl[\biggl(\begin{pmatrix} \frac 12 \\ 1 \\ 0 \end{pmatrix} - \begin{pmatrix} 0 \\ 0 \\ \frac 12 \end{pmatrix}\biggl) \times \biggl(\begin{pmatrix} 1 \\ \frac 12 \\ 0 \end{pmatrix} - \begin{pmatrix} 0 \\ 0 \\ \frac 12 \end{pmatrix}\biggl)\Biggl] = 0$
+
+ $\begin{pmatrix} x_1 \\ x_2 \\ x_3-\frac 12 \end{pmatrix} \cdot \Biggl[\begin{pmatrix} \frac 12 \\ 1 \\ -\frac 12 \end{pmatrix} \times \begin{pmatrix} 1 \\ \frac 12 \\ -\frac 12 \end{pmatrix}\Biggl] = 0$
+
+ $-\frac 14 x_1 - \frac 14 x_2 - \frac 34 x_3 +\frac 38 = 0$
+
+ $-2x_1-2x_2-6x_3=-3$
+ ![img](img1.4.2.jpg)
 
  ---
 
