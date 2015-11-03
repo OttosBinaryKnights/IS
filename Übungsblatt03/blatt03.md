@@ -84,21 +84,31 @@ Gegeben sei eine Menge von Punkten in einem zweidimensionalen Raum (also Punkte 
   ---
 
 ## Aufgabe 10 Netze von Schwellenwertelementen
- * a) Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte $(x_1,x_2)$ innerhalb des in der nebenstehenden Skizze gezeigten Dreiecks denWert 1 undfür Punkte außerhalb den Wert 0 liefert!
- * b) Es soll innerhalb eines Gebietes der $x_1-x_2-$Ebene, das durch ein Polygon begrenzt, aber nicht konvex ist, die Ausgabe 1, und außerhalb die Ausgabe 0 erzeugt werden. Welches ProblemkannindiesemFallimVergleichzudemobenbetrachteten Dreieck auftreten? Wie kann man dieses Problem lösen?
+ * **a) Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte $(x_1,x_2)$ innerhalb des in der nebenstehenden Skizze gezeigten Dreiecks den Wert 1 und für Punkte außerhalb den Wert 0 liefert!**
+ *
+
  ![Graph](Graph.jpg)
 ### a) 3 Neuronen, die jeweils die 3 Geraden modellieren
-    1. Neuron w1 = 0    (Gerade von P(1/3) nach P(2/1))
-              w2 = -1
-              Teta = -3
-    2. Neuron w1 = 2    (Gerade von P(1/3) nach P(3/3))
-              w2 = 1
-              Teta = 5
-    3. Neuron w1 = -2   (Gerade von P(2/1) nach P(3/3))
-              w2 = 1
-              Teta = -3
+    1. Neuron (Gerade von P(1/3) nach P(3/3))
+            w1 = 0
+            w2 = -1
+            Teta = -3
+    2. Neuron (Gerade von P(2/3) nach P(1/3))
+            w1 = 2
+            w2 = 1
+            Teta = 5
+    3. Neuron (Gerade von P(3/3) nach P(2/1))
+            w1 = -2
+            w2 = 1
+            Teta = -3
     Siehe Bild, diese 3 Neuronen zusammengeschaltet mit jeweils Gewicht 1 und Teta = 3 (oder Gewicht 2 und Teta = 6 etc. siehe 9b) berechnet 1 für alle Punkte innerhalb des Dreiecks und 0 für ausserhalb.
-    ### b) Man könnte Punkte doppelt zählen (Eckpunkte) und dann würde man diesen den Wert 2 zuweisen. Genau für diese Punkte wird jeweils ein zusätzliches Neuron genutzt um diesen Punkt aus der Menge abzuziehen und nur Werte zwischen 0 und 1 zu erhalten.
+
+### b)
+**Es soll innerhalb eines Gebietes der $x_1-x_2$ - Ebene, das durch ein Polygon begrenzt, aber nicht konvex ist, die Ausgabe 1, und außerhalb die Ausgabe 0 erzeugt werden. Welches Problem kann in diesem Fall im Vergleich zu dem oben betrachteten Dreieck auftreten? Wie kann man dieses Problem lösen?**
+
+Durch konkarve Form (z.B. C-Form) können Flächen entstehen bei denen sich die einzelnen Entscheidungsgrenzen widersprechen.
+
+Lösen ließe sich das Problem durch Zerteilen in konvexe Teilbereiche, die dann mit logischem oder verknüpft werden.
 
  ---
 
