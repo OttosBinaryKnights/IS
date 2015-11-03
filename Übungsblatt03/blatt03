@@ -73,14 +73,44 @@ Gegeben sei eine Menge von Punkten in einem zweidimensionalen Raum (also Punkte 
  * b) Wenn die Aufgabe lösbar ist: Ist sie eindeutig lösbar? D.h.: Gibt es einen eindeutigen SatzvonGewichtenundeineneindeutigenSchwellenwert, sodassdieAufgabegelöstwird? Wenn nicht: Welche Variationsmöglichkeiten gibt es?
  * c) Wie könnte man in natürlicher Weise eine „beste“ Lösung der Aufgabe deﬁnieren?
 
+
+### a) Wenn das Problem linear separabel ist. (Gegenbeispiel Biimplikation oder XOR)
+### b) Nein, es gibt keinen eindeutigen Satz von Gewichten und Schwellenwerten, man kann diese zb skalieren.
+       Beispiel:
+       Löse funktion x1 and x2
+       mögliche Gewichte und Schwellenwerte sind: w1 = 1 w2 = 1 und Teta = 2 , oder w1 = 2 und w2 = 2 und Teta = 4
+       
+      
   ---
 
 ## Aufgabe 10 Netze von Schwellenwertelementen
  * a) Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte $(x_1,x_2)$ innerhalb des in der nebenstehenden Skizze gezeigten Dreiecks denWert 1 undfür Punkte außerhalb den Wert 0 liefert!
  * b) Es soll innerhalb eines Gebietes der $x_1-x_2-$Ebene, das durch ein Polygon begrenzt, aber nicht konvex ist, die Ausgabe 1, und außerhalb die Ausgabe 0 erzeugt werden. Welches ProblemkannindiesemFallimVergleichzudemobenbetrachteten Dreieck auftreten? Wie kann man dieses Problem lösen?
  ![Graph](Graph.jpg)
-
+### a) 3 Neuronen, die jeweils die 3 Geraden modellieren
+    1. Neuron w1 = 0    (Gerade von P(1/3) nach P(2/1))
+              w2 = -1
+              Teta = -3
+    2. Neuron w1 = 2    (Gerade von P(1/3) nach P(3/3))
+              w2 = 1
+              Teta = 5
+    3. Neuron w1 = -2   (Gerade von P(2/1) nach P(3/3))
+              w2 = 1
+              Teta = -3
+    Siehe Bild, diese 3 Neuronen zusammengeschaltet mit jeweils Gewicht 1 und Teta = 3 (oder Gewicht 2 und Teta = 6 etc. siehe 9b) berechnet 1 für alle Punkte innerhalb des Dreiecks und 0 für ausserhalb.
+    ### b) Man könnte Punkte doppelt zählen (Eckpunkte) und dann würde man diesen den Wert 2 zuweisen. Genau für diese Punkte wird jeweils ein zusätzliches Neuron genutzt um diesen Punkt aus der Menge abzuziehen und nur Werte zwischen 0 und 1 zu erhalten.
+    
  ---
 
 ## Aufgabe 11 Berechnungsfähigkeiten von Netzen von Schwellenwertelementen
 Kann man ein Netz aus Schwellenwertelementen angeben, das für Punkte innerhalb eines Kreises mit Radius 1 um den Ursprung die Ausgabe 1 und außerhalb die Ausgabe 0 liefert? Wenn ja, skizzieren Sie dieses Netz! Wenn nein, geben Sie ein Prinzip an, wie man ein Netz bestimmen kann, das eine Näherungslösung liefert!
+
+
+Ja, man könnte sich RBF-Netze zu Nutze machen. (Radiale Basisfuntkionsnetze)
+Bislang hat man immer nur nach folgender Form die Aktivierungsfunktion des Neurons berechnet: w_i * x_i - Teta = 0 bzw. w_i * x_i <= Teta
+War diese Formel erfüllt so "feuert" das Neuron.
+Bei RBF Netzen sieht die Aktivierungsfunktion wie folgt aus, die Gewichte stellen nun das Zentrum des Kreises dar und der Schwellwert den Radius des Kreises.
+Damit ein Punkt nun innerhalb des Kreises liegt muss nur folgende Aktivierungsfunktion erfüllt sein.
+Hier im konkreten Beispiel mit w1 = 0 und w2 = 0 und Teta = 1 (Radius 1)
+
+sqrt((x1 - w1)^2 + (x2-w2)^2) <= 1 (Teta)
