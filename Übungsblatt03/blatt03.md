@@ -68,18 +68,24 @@ Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen l�
  ---
 
 ## Aufgabe 9 Schwellenwertelemente
-Gegeben sei eine Menge von Punkten in einem zweidimensionalen Raum (also Punkte in einer Ebene). Für eine festgelegte Teilmenge dieser Punkte soll ein Schwellenwertelement eine Ausgabe von 1 erzeugen, für die übrigen eine Ausgabe von 0.
- * a) Unter welchen Bedingungen kann ein Schwellenwertelement diese Aufgabe lösen?
- * b) Wenn die Aufgabe lösbar ist: Ist sie eindeutig lösbar? D.h.: Gibt es einen eindeutigen SatzvonGewichtenundeineneindeutigenSchwellenwert, sodassdieAufgabegelöstwird? Wenn nicht: Welche Variationsmöglichkeiten gibt es?
- * c) Wie könnte man in natürlicher Weise eine „beste“ Lösung der Aufgabe deﬁnieren?
+**Gegeben sei eine Menge von Punkten in einem zweidimensionalen Raum (also Punkte in einer Ebene). Für eine festgelegte Teilmenge dieser Punkte soll ein Schwellenwertelement eine Ausgabe von 1 erzeugen, für die übrigen eine Ausgabe von 0.**
+ * **a) Unter welchen Bedingungen kann ein Schwellenwertelement diese Aufgabe lösen?**
 
+ Wenn das Problem linear separabel ist.
+ (bedeutet: "Durch eine Gerade ist die Teilmenge abgrenzbar")
 
-### a) Wenn das Problem linear separabel ist. (Gegenbeispiel Biimplikation oder XOR)
-### b) Nein, es gibt keinen eindeutigen Satz von Gewichten und Schwellenwerten, man kann diese zb skalieren.
-       Beispiel:
-       Löse funktion x1 and x2
-       mögliche Gewichte und Schwellenwerte sind: w1 = 1 w2 = 1 und Teta = 2 , oder w1 = 2 und w2 = 2 und Teta = 4
+ * **b) Wenn die Aufgabe lösbar ist: Ist sie eindeutig lösbar? D.h.: Gibt es einen eindeutigen Satz von Gewichten und einen eindeutigen Schwellenwert, sodass die Aufgabe gelöst wird? Wenn nicht: Welche Variationsmöglichkeiten gibt es?**
 
+ Nein, es gibt keinen eindeutigen Satz von Gewichten und Schwellenwerten, man kann diese zB skalieren.
+        Beispiel:
+        Löse Funktion x1 and x2
+        mögliche Gewichte und Schwellenwerte sind:
+        w1 = 1; w2 = 1 und Teta = 2 ,
+        oder w1 = 2 und w2 = 2 und Teta = 4
+
+ * **c) Wie könnte man in natürlicher Weise eine „beste“ Lösung der Aufgabe deﬁnieren?**
+ 
+ Der Strich als Grenze der von beiden Teilmengen den gleichen, optimalen Abstand hat.
 
   ---
 
