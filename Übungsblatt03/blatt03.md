@@ -1,32 +1,33 @@
 # 3. Übungsblatt
 ## Aufgabe 8 Schwellenwertelemente
 
-Bestimmen Sie die Gewichte und den Schwellenwert einzelner Schwellenwertelemente (kein Netz von Schwellenwertelementen), sodass sie die folgenden Booleschen Funktionen berechnen:
- * a) $x_1 \land x_2 \land \neg x_3$
- Da nur ein Punkt von den anderen Punkten durch eine Ebene getrennt werden muss, kann man diese durch probieren herausfinden.
+**Bestimmen Sie die Gewichte und den Schwellenwert einzelner Schwellenwertelemente (kein Netz von Schwellenwertelementen), sodass sie die folgenden Booleschen Funktionen berechnen:**
+ * **a) $x_1 \land x_2 \land \neg x_3$
+ Da nur ein Punkt von den anderen Punkten durch eine Ebene getrennt werden muss, kann man diese durch probieren herausfinden.**
  ![img](img1.1.1.jpg)
  ![img](img1.1.2.jpg)
 
- * b) $\neg x_1 \lor (\neg x_2 \land x_3)$
- Wahheitstabelle:
- $\begin{array}(c|c|c|c|c|c|c)
- x_1 & x_2 & x_3 & \neg x_1 & \neg x_2 & \neg x_2 \land x_3 & f \\
-\hline
- 0     & 0     & 0     & 1          & 1          & 0                    & 1 \\
- 0     & 0     & 1     & 1          & 1          & 1                    & 1 \\
- 0     & 1     & 0     & 1          & 0          & 0                    & 1 \\
- 0     & 1     & 1     & 1          & 0          & 0                    & 1 \\
- 1     & 0     & 0     & 0          & 1          & 0                    & 0 \\
- 1     & 0     & 1     & 0          & 1          & 1                    & 1 \\
- 1     & 1     & 0     & 0          & 0          & 0                    & 0 \\
- 1     & 1     & 1     & 0          & 0          & 0                    & 0
- \end{array}$
+ * **b) $\neg x_1 \lor (\neg x_2 \land x_3)$**
+
+ Wahrheitstabelle:
+
+| $x_1$ | $x_2$ | $x_3$ | $\neg x_1$ | $\neg x_2$ | $\neg x_2 \land x_3$ | $f$ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 0 | 0 | 0 | 1 | 1 | 0 | 1 |
+| 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 1 | 0 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 0 | 0 | 1 |
+| 1 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 | 0 |
 
  $\begin{matrix}
 (0;0;0) & (0;1;1) &  & A(\frac 12;1;0) \\
 (0;0;1) & (1;0;1) &  & B(1;\frac 12;1) \\
 (0;1;0) &         &  & C(1;0;\frac 12)
 \end{matrix}$
+
 ![img](img1.2.1.jpg)
 
  $(x-A)\cdot [(C-A)\times (B-A)]=0$
@@ -39,18 +40,22 @@ Bestimmen Sie die Gewichte und den Schwellenwert einzelner Schwellenwertelemente
  $-\frac 34 x_1 + \frac 38 - \frac 14 x_2 + \frac 14 + \frac 14 x_3 =0$
  $-6x_1+3-2x_2+2+2x_3=0$
  $-6x_1-2x_2+2x_3+5=0$
+
  ![img](img1.2.2.jpg)
 
- * c) $(\neg x_1 \lor x_2)\land (\neg x_2 \lor x_3)$
- Wahrheitstabelle
+---
+ * **c) $(\neg x_1 \lor x_2)\land (\neg x_2 \lor x_3)$
+ Wahrheitstabelle**
 ![Wertetabelle](Wertetabelle.jpg)
 
- $(0;0;0);(0;0;1);(0;1;1);(1;1;1)$
-Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen lässt.
+  $(0;0;0);(0;0;1);(0;1;1);(1;1;1)$
+Keine Lösung möglich, da sich keine Ebene zum Trennen der Punkte aufspannen lässt.
 
- * d) $\neg (x_1 \land x_2)\land \neg x_3$
+---
+ * **d) $\neg (x_1 \land x_2)\land \neg x_3$**
  ![Wertetabelle](Wertetabelle2.jpg)
  $(0;0;0);(0;1;0);(1;0;0)$
+
  ![img](img1.4.1.jpg)
 
  $A(0;0;\frac12);B(1;\frac 12;0);C(\frac 12; 1;0)$
@@ -63,6 +68,7 @@ Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen l�
  $-\frac 14 x_1 - \frac 14 x_2 - \frac 34 x_3 +\frac 38 = 0$
 
  $-2x_1-2x_2-6x_3=-3$
+
  ![img](img1.4.2.jpg)
 
  ---
@@ -90,11 +96,11 @@ Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen l�
   ---
 
 ## Aufgabe 10 Netze von Schwellenwertelementen
- * **a) Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte $(x_1,x_2)$ innerhalb des in der nebenstehenden Skizze gezeigten Dreiecks den Wert 1 und für Punkte außerhalb den Wert 0 liefert!**
- *
+
 
  ![Graph](Graph.jpg)
-### a) 3 Neuronen, die jeweils die 3 Geraden modellieren
+### a)
+**Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte $(x_1,x_2)$ innerhalb des in der nebenstehenden Skizze gezeigten Dreiecks den Wert 1 und für Punkte außerhalb den Wert 0 liefert!**
     1. Neuron (Gerade von P(1/3) nach P(3/3))
             w1 = 0
             w2 = -1
@@ -123,7 +129,7 @@ Lösen ließe sich das Problem durch Zerteilen in konvexe Teilbereiche, die dann
 
 Ohne komische mathematische Trickserei nur Annäherung über n-Eck möglich.
 
-**komische Lösung**
+**komische Lösung:**
 Ja, man könnte sich RBF-Netze zu Nutze machen. (Radiale Basisfuntkionsnetze)
 Bislang hat man immer nur nach folgender Form die Aktivierungsfunktion des Neurons berechnet: w_i * x_i - Teta = 0 bzw. w_i * x_i <= Teta
 War diese Formel erfüllt so "feuert" das Neuron.
