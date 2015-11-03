@@ -84,7 +84,7 @@ Keine Lösung möglich, da sich keine Ebene zum trennen der Punkte aufspannen l�
         oder w1 = 2 und w2 = 2 und Teta = 4
 
  * **c) Wie könnte man in natürlicher Weise eine „beste“ Lösung der Aufgabe deﬁnieren?**
- 
+
  Der Strich als Grenze der von beiden Teilmengen den gleichen, optimalen Abstand hat.
 
   ---
@@ -119,9 +119,11 @@ Lösen ließe sich das Problem durch Zerteilen in konvexe Teilbereiche, die dann
  ---
 
 ## Aufgabe 11 Berechnungsfähigkeiten von Netzen von Schwellenwertelementen
-Kann man ein Netz aus Schwellenwertelementen angeben, das für Punkte innerhalb eines Kreises mit Radius 1 um den Ursprung die Ausgabe 1 und außerhalb die Ausgabe 0 liefert? Wenn ja, skizzieren Sie dieses Netz! Wenn nein, geben Sie ein Prinzip an, wie man ein Netz bestimmen kann, das eine Näherungslösung liefert!
+**Kann man ein Netz aus Schwellenwertelementen angeben, das für Punkte innerhalb eines Kreises mit Radius 1 um den Ursprung die Ausgabe 1 und außerhalb die Ausgabe 0 liefert? Wenn ja, skizzieren Sie dieses Netz! Wenn nein, geben Sie ein Prinzip an, wie man ein Netz bestimmen kann, das eine Näherungslösung liefert!**
 
+Ohne komische mathematische Trickserei nur Annäherung über n-Eck möglich.
 
+**komische Lösung**
 Ja, man könnte sich RBF-Netze zu Nutze machen. (Radiale Basisfuntkionsnetze)
 Bislang hat man immer nur nach folgender Form die Aktivierungsfunktion des Neurons berechnet: w_i * x_i - Teta = 0 bzw. w_i * x_i <= Teta
 War diese Formel erfüllt so "feuert" das Neuron.
