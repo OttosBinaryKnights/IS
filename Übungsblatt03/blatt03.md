@@ -79,8 +79,8 @@ Gegeben sei eine Menge von Punkten in einem zweidimensionalen Raum (also Punkte 
        Beispiel:
        Löse funktion x1 and x2
        mögliche Gewichte und Schwellenwerte sind: w1 = 1 w2 = 1 und Teta = 2 , oder w1 = 2 und w2 = 2 und Teta = 4
-       
-      
+
+
   ---
 
 ## Aufgabe 10 Netze von Schwellenwertelementen
@@ -99,7 +99,7 @@ Gegeben sei eine Menge von Punkten in einem zweidimensionalen Raum (also Punkte 
               Teta = -3
     Siehe Bild, diese 3 Neuronen zusammengeschaltet mit jeweils Gewicht 1 und Teta = 3 (oder Gewicht 2 und Teta = 6 etc. siehe 9b) berechnet 1 für alle Punkte innerhalb des Dreiecks und 0 für ausserhalb.
     ### b) Man könnte Punkte doppelt zählen (Eckpunkte) und dann würde man diesen den Wert 2 zuweisen. Genau für diese Punkte wird jeweils ein zusätzliches Neuron genutzt um diesen Punkt aus der Menge abzuziehen und nur Werte zwischen 0 und 1 zu erhalten.
-    
+
  ---
 
 ## Aufgabe 11 Berechnungsfähigkeiten von Netzen von Schwellenwertelementen
