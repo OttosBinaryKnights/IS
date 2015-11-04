@@ -2,8 +2,8 @@
 ## Aufgabe 8 Schwellenwertelemente
 
 **Bestimmen Sie die Gewichte und den Schwellenwert einzelner Schwellenwertelemente (kein Netz von Schwellenwertelementen), sodass sie die folgenden Booleschen Funktionen berechnen:**
- * **a) $x_1 \land x_2 \land \neg x_3$
- Da nur ein Punkt von den anderen Punkten durch eine Ebene getrennt werden muss, kann man diese durch probieren herausfinden.**
+ * **a) $x_1 \land x_2 \land \neg x_3$**
+ **Da nur ein Punkt von den anderen Punkten durch eine Ebene getrennt werden muss, kann man diese durch probieren herausfinden.**
  ![img](img1.1.1.jpg)
  ![img](img1.1.2.jpg)
 
@@ -12,7 +12,7 @@
  Wahrheitstabelle:
 
 | $x_1$ | $x_2$ | $x_3$ | $\neg x_1$ | $\neg x_2$ | $\neg x_2 \land x_3$ | $f$ |
-| :---: | :---: | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 0 | 0 | 0 | 1 | 1 | 0 | 1 |
 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
 | 0 | 1 | 0 | 1 | 0 | 0 | 1 |
