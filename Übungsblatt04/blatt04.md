@@ -31,6 +31,8 @@ $L_ij hat Gewichte w_ik = { 2 falls l_ik = x_k
 
 **Geben Sie anhand einer anschaulichen Darstellung der Fehlerfunktion an, wie der Lernvorgang verläuft für**
 
+ONLINE
+
 a) **Startwerte $w = 2$ und $\Theta = -2$, Lernrate $\frac{1}{3}$**
 
 Nach Delta-Regel:
@@ -41,6 +43,101 @@ Nach Delta-Regel:
 | 2 | 1 | 0 | 2 | 0 | 1 |-1/3 | | 5/3 | - |
 
 b) **Startwerte $w = 1$ und $\Theta = 2$, Lernrate $\frac{1}{2}$**
+
+a)
+x = [0], dw = [0,-0], w_neu = [2,-2]
+x = [1], dw = [-0.33,0.33], w_neu = [1.66,-1.66]
+x = [0], dw = [0,-0], w_neu = [1.66,-1.66]
+x = [1], dw = [-0.33,0.33], w_neu = [1.33,-1.33]
+x = [0], dw = [0,-0], w_neu = [1.33,-1.33]
+x = [1], dw = [-0.33,0.33], w_neu = [1,-1]
+x = [0], dw = [0,-0], w_neu = [1,-1]
+x = [1], dw = [-0.33,0.33], w_neu = [0.66,-0.66]
+x = [0], dw = [0,-0], w_neu = [0.66,-0.66]
+x = [1], dw = [-0.33,0.33], w_neu = [0.33,-0.33]
+x = [0], dw = [0,-0], w_neu = [0.33,-0.33]
+x = [1], dw = [-0.33,0.33], w_neu = [0,0]
+x = [0], dw = [0,-0], w_neu = [0,0]
+x = [1], dw = [-0.33,0.33], w_neu = [-0.33,0.33]
+x = [0], dw = [0,-0.33], w_neu = [-0.33,0]
+
+b)
+x = [0], dw = [0.0,-0.5], w_neu = [1.0,1.5]
+x = [1], dw = [0.0,-0.0], w_neu = [1.0,1.5]
+x = [0], dw = [0.0,-0.5], w_neu = [1.0,1.0]
+x = [1], dw = [-0.5,0.5], w_neu = [0.5,1.5]
+x = [0], dw = [0.0,-0.5], w_neu = [0.5,1.0]
+x = [1], dw = [0.0,-0.0], w_neu = [0.5,1.0]
+x = [0], dw = [0.0,-0.5], w_neu = [0.5,0.5]
+x = [1], dw = [-0.5,0.5], w_neu = [0.0,1.0]
+x = [0], dw = [0.0,-0.5], w_neu = [0.0,0.5]
+x = [1], dw = [0.0,-0.0], w_neu = [0.0,0.5]
+x = [0], dw = [0.0,-0.5], w_neu = [0.0,0.0]
+x = [1], dw = [-0.5,0.5], w_neu = [-0.5,0.5]
+x = [0], dw = [0.0,-0.5], w_neu = [-0.5,0.0]
+
+c)
+x = [0], dw = [0.0,-0.1], w_neu = [2.0,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.9,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.9,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.8,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.8,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.7,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.7,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.6,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.6,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.5,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.5,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.4,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.4,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.3,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.3,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.2,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.2,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.1,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.1,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [1.0,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [1.0,0.9]
+x = [1], dw = [-0.1,0.1], w_neu = [0.9,1.0]
+x = [0], dw = [0.0,-0.1], w_neu = [0.9,0.9]
+x = [1], dw = [0.0,-0.0], w_neu = [0.9,0.9]
+x = [0], dw = [0.0,-0.1], w_neu = [0.9,0.8]
+x = [1], dw = [-0.1,0.1], w_neu = [0.8,0.9]
+x = [0], dw = [0.0,-0.1], w_neu = [0.8,0.8]
+x = [1], dw = [0.0,-0.0], w_neu = [0.8,0.8]
+x = [0], dw = [0.0,-0.1], w_neu = [0.8,0.7]
+x = [1], dw = [-0.1,0.1], w_neu = [0.7,0.8]
+x = [0], dw = [0.0,-0.1], w_neu = [0.7,0.7]
+x = [1], dw = [0.0,-0.0], w_neu = [0.7,0.7]
+x = [0], dw = [0.0,-0.1], w_neu = [0.7,0.6]
+x = [1], dw = [-0.1,0.1], w_neu = [0.6,0.7]
+x = [0], dw = [0.0,-0.1], w_neu = [0.6,0.6]
+x = [1], dw = [0.0,-0.0], w_neu = [0.6,0.6]
+x = [0], dw = [0.0,-0.1], w_neu = [0.6,0.5]
+x = [1], dw = [-0.1,0.1], w_neu = [0.5,0.6]
+x = [0], dw = [0.0,-0.1], w_neu = [0.5,0.5]
+x = [1], dw = [0.0,-0.0], w_neu = [0.5,0.5]
+x = [0], dw = [0.0,-0.1], w_neu = [0.5,0.4]
+x = [1], dw = [-0.1,0.1], w_neu = [0.4,0.5]
+x = [0], dw = [0.0,-0.1], w_neu = [0.4,0.4]
+x = [1], dw = [0.0,-0.0], w_neu = [0.4,0.4]
+x = [0], dw = [0.0,-0.1], w_neu = [0.4,0.3]
+x = [1], dw = [-0.1,0.1], w_neu = [0.3,0.4]
+x = [0], dw = [0.0,-0.1], w_neu = [0.3,0.3]
+x = [1], dw = [0.0,-0.0], w_neu = [0.3,0.3]
+x = [0], dw = [0.0,-0.1], w_neu = [0.3,0.2]
+x = [1], dw = [-0.1,0.1], w_neu = [0.2,0.3]
+x = [0], dw = [0.0,-0.1], w_neu = [0.2,0.2]
+x = [1], dw = [0.0,-0.0], w_neu = [0.2,0.2]
+x = [0], dw = [0.0,-0.1], w_neu = [0.2,0.1]
+x = [1], dw = [-0.1,0.1], w_neu = [0.1,0.2]
+x = [0], dw = [0.0,-0.1], w_neu = [0.1,0.1]
+x = [1], dw = [0.0,-0.0], w_neu = [0.1,0.1]
+x = [0], dw = [0.0,-0.1], w_neu = [0.1,0.0]
+x = [1], dw = [-0.1,0.1], w_neu = [-0.0,0.1]
+x = [0], dw = [0.0,-0.1], w_neu = [0.0,0.0]
+x = [1], dw = [-0.1,0.1], w_neu = [-0.1,0.1]
+x = [0], dw = [0.0,-0.1], w_neu = [-0.1,0.0]
 
 c) **Startwerte $w=2$ und $\Theta = 1$, Lernrate $\frac{1}{10}$**
 
@@ -54,23 +151,48 @@ b) Fehler schwankt immer zwischen 1 bzw. 0 und in nächster Epoche 1 bzw. -1  bi
 
 c) Fehler immer zwischen 1 und -1, lernrate ziemlich gering, nicht zu ende ausgerechnet...weil viele lernepochen nötig.
 
-
-
-
-
-
 ---
 ## Aufgabe 14 Trainieren von Schwellenwertelementen
-**Geben Sie den Ablauf des Lernvorgangs (Delta-Regel) eines Schwellenwertelementes für die Boolesche Funktion x1 ∧ ¬x2 an! (Am besten mithilfe einer Tabelle, die Spalten für die Werte von x1, x2, d = x1 ∧¬x2, x·w, y, e (Fehler), ∆w1, ∆w2, ∆θ, w1, w2 und θ enthält.) Verwenden Sie als Anfangsbelegung des Gewichtsvektors w = (0, 0, 0) und als Lernrate 1. Geben Sie eine geometrische Interpretation des Lernergebnisses an!**
+**Geben Sie den Ablauf des Lernvorgangs (Delta-Regel) eines Schwellenwertelementes für die Boolesche Funktion $x_1 \land \neg x_2$ an! (Am besten mithilfe einer Tabelle, die Spalten für die Werte von x1, x2, $d = x_1 \land \neg x_2$, x·w, y, e (Fehler), ∆w1, ∆w2, ∆θ, w1, w2 und θ enthält.) Verwenden Sie als Anfangsbelegung des Gewichtsvektors w = (0, 0, 0) und als Lernrate 1. Geben Sie eine geometrische Interpretation des Lernergebnisses an!**
 
-![14_belkinot.jpg](14_belkinot.jpg)
+$d=x_1 \land \neg x_2$
 
-| $x_1$ | $x_2$ | $d=x_1 \land \neg x_2$ | $x*w$ | $y$ | $\epsilon$ | $\Delta w_1$ | $\Delta w_2$ | $\Delta \Theta$| $w_1$| $w_2$| $ \Theta$ |
+|  | $x_1$ | $x_2$ | $d$ | $x*w$ | $y$ | $\epsilon$ | $\Delta w_1$ | $\Delta w_2$ | $\Delta \Theta$| $w_1$| $w_2$| $ \Theta$ |
 | :---: | :---: | :---: | :---: |
-| 0 | 0 | 0 |  0 | 0 | 1 |
-
+|0|  0 |  0 | 0 |  0  | 1 | 1 |  0  |  0  |  1 |  0 |  0 | 1 |
+| |  0 |  1 | 0| -1  | 0 | 0|  0  |  0  |  0|  0 |  0 | 1 |
+| |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 |  0 | 0 |
+| |  1 |  1 | 0|  1  | 1 | 1| -1  | -1  |  1|  0 | -1 | 1 |
+||
+|1|  0 |  0 | 0| -1  | 0 | 0|  0  |  0  |  0|  0 | -1 | 1 |
+| |  0 |  1 | 0| -2  | 0 | 0|  0  |  0  |  0|  0 | -1 | 1 |
+| |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 | -1 | 0 |
+| |  1 |  1 | 0|  0  | 1 | 1| -1  | -1  |  1|  0 | -2 | 1 |
+||
+|2|  0 |  0 | 0| -1  | 0 | 0|  0  |  0  |  0|  0 | -2 | 1 |
+| |  0 |  1 | 0| -3  | 0 | 0|  0  |  0  |  0|  0 | -2 | 1 |
+| |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 | -2 | 0 |
+| |  1 |  1 | 0| -1  | 0 | 0|  0  |  0  |  0|  1 | -2 | 0 |
+||
+|3|  0 |  0 | 0|  0  | 1 | 1|  0  |  0  |  0|  1 | -2 | 0 |
+| |  0 |  1 | 0| -2  | 0 | 0|  0  |  0  |  0|  1 | -2 | 0 |
+| |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 | -2 | 0 |
+| |  1 |  1 | 0| -1  | 0 | 0|  0  |  0  |  0|  1 | -2 | 0 |
+||
+|4|  0 |  0 | 0|  0  | 1 | 1|  0  |  0  |  1|  1 | -2 | 1 |
+| |  0 |  1 | 0| -3  | 0 | 0|  0  |  0  |  0|  1 | -2 | 1 |
+| |  1 |  0 | 1|  1  | 1 | 0|  0  |  0  |  0|  1 | -2 | 1 |
+| |  1 |  1 | 0| -2  | 0 | 0|  0  |  0  |  0|  1 | -2 | 1 |
+||
+|5|  0 |  0 | 0| -1  | 0 | 0|  0  |  0  |  0|  1 | -2 | 1 |
+| |  0 |  1 | 0| -3  | 0 | 0|  0  |  0  |  0|  1 | -2 | 1 |
+| |  1 |  0 | 1|  1  | 1 | 0|  0  |  0  |  0|  1 | -2 | 1 |
+| |  1 |  1 | 0| -2  | 0 | 0|  0  |  0  |  0|  1 | -2 | 1 |
+||
 
 Endergebnis nach Deltaregel: w1 = 1, w2 = -2 Theta = 1
+
+![](Aufgabe14.jpg)
 
 ---
 ## Aufgabe 15 Gradientenabstieg
