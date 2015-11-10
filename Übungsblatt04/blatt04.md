@@ -63,6 +63,7 @@ c) Fehler immer zwischen 1 und -1, lernrate ziemlich gering, nicht zu ende ausge
 ## Aufgabe 14 Trainieren von Schwellenwertelementen
 **Geben Sie den Ablauf des Lernvorgangs (Delta-Regel) eines Schwellenwertelementes für die Boolesche Funktion x1 ∧ ¬x2 an! (Am besten mithilfe einer Tabelle, die Spalten für die Werte von x1, x2, d = x1 ∧¬x2, x·w, y, e (Fehler), ∆w1, ∆w2, ∆θ, w1, w2 und θ enthält.) Verwenden Sie als Anfangsbelegung des Gewichtsvektors w = (0, 0, 0) und als Lernrate 1. Geben Sie eine geometrische Interpretation des Lernergebnisses an!**
 
+![14_belkinot.jpg](14_belkinot.jpg)
 
 | $x_1$ | $x_2$ | $d=x_1 \land \neg x_2$ | $x*w$ | $y$ | $\epsilon$ | $\Delta w_1$ | $\Delta w_2$ | $\Delta \Theta$| $w_1$| $w_2$| $ \Theta$ |
 | :---: | :---: | :---: | :---: |
