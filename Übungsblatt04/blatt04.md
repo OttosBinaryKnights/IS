@@ -4,21 +4,21 @@
 
 Idee: Disjunktive Normalform:
 Alle Funktionen $f = D_1 \lor D_2 \lor ... D_n$
-wobei D1 bis Dn jeweils aus Literalen L bestehen. 
+wobei D1 bis Dn jeweils aus Literalen L bestehen.
 $D_i = L_i1 \land L_i2 \land ... L_ij$ , wobei $L_ik = x_k oder L_ik = \neg x_ik$
 
 $D_i$ ist ein Neuron
 
 $L_ij hat Gewichte w_ik = { 2 falls l_ik = x_k
                             -2 falls l_ik = \neg x_k
-                            
+
         Teta_i = j-1 + 1/2 \sum w_it$
-        
+
         Ergebnis in der 3. Schicht
   1 Ausgabeneuron mit n-Eingängen    
-  
+
   (aus Neuronalen Netzen wo man zeigen soll dass jede Bool'sche Funktion mit Netzen aus 2 Schichten liefert. 3. Schicht sind die Eingaben selber (x_ik) Hat er ja in der Übung gesagt, dass es darauf ankommt ob man eingabeschicht mitzählt oder nicht. Zwischenschicht wäre dann mehrere Neuronen D_i und diese wiederum werden dann verundet in der 3. Schicht zu dem Ausgabeneuron.
-  
+
 
 ---
 ## Aufgabe 13 Trainieren von Schwellenwertelementen
@@ -76,9 +76,13 @@ Endergebnis nach Deltaregel: w1 = 1, w2 = -2 Theta = 1
 **Wie in der Vorlesung erläutert, werden neuronale Netze durch Gradientenabstieg trainiert. D.h., man berechnet den Gradienten der Fehlerfunktion bzgl. der Parameter des neuronalen Netzes (Gewichte und Biaswerte) und bewegt sich dann ein kleines Stück (durch die Lernrate und die Größe des Gradienten bestimmt) in die dem Gradienten entgegengesetzte Richtung. (Der Gradient gibt ja die Richtung der stärksten Steigung der Funktion an, wir wollen aber den Fehler minimieren, daher müssen wir uns in die Gegenrichtung bewegen.) In dieser Aufgabe veranschaulichen wir uns dieses Verfahren anhand der Minimierung einer einstelligen Funktion. Der Gradient ist in diesem Fall einfach die Ableitung der Funktion nach ihrem Argument. Wir betrachten die Funktion**
 $$ f(x) = \frac{(x + 4)(x + 2)(x + 1)(x - 3)}{20} + 2 $$
 **Versuchen Sie, das Minimum dieser Funktion durch Gradientenabstieg zu bestimmen!**
-a) mit Startwert x0 = 3 und Lernrate η = 0.05,
-b) mit Startwert x0 = −0.5 und Lernrate η = 0.95,
-c) mit Startwert x0 = −2 und Lernrate η = 0.2.
+
+a) **mit Startwert $x_0 = 3$ und Lernrate η = 0.05,**
+
+b) **mit Startwert $x_0 = -0.5$ und Lernrate η = 0.95,**
+
+c) **mit Startwert $x_0 = -2$ und Lernrate η = 0.2.**
+
 **Veranschaulichen Sie den Vorgang durch eine Skizze! Welche Probleme treten auf?**
 
 
@@ -95,10 +99,10 @@ a) konvergiert langsam von 3 auf 2,65 in immer kleineren schritten gegen 2 (x_6 
 
 b) wir springen immer hin und her (siehe Plot) auf 0,6 nach 2,4 nach -0,35 auf 0,969 auf 2,5 usw.
   Lernrate scheint zu groß zu sein.
-  
+
 c) Starten bei -2 und x_n wird immer kleiner (x_4 = -2,469)
-   Werden wohl im lokalen Minima (siehe Plot wolfram alpha) landen. 
-   
+   Werden wohl im lokalen Minima (siehe Plot wolfram alpha) landen.
+
 Fazit: Beende Gradientenverfahren wenn die Änderung der Näherung einen Grenzwert unterschreitet.
 Lernrate zu groß führt zu ungünstigen Sprüngen.
 -> Gradientenabstiegsverfahren findet nur lokale Minima egal wie, aber man sollte die Lernrate vieleicht nach jedem Lernschritt anpassen, um schneller zu "guten" Ergebnissen zu kommen.
