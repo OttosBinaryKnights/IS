@@ -4,9 +4,23 @@
 
 ---
 ## Aufgabe 13 Trainieren von Schwellenwertelementen
-**In der Vorlesung wurde der Lernvorgang eines Schwellenwertelementes für das logische AND behandelt. Hier soll nun die logische Negation betrachtet werden. Geben Sie anhand einer anschaulichen Darstellung der Fehlerfunktion an, wie der Lernvorgang verläuft für**
+**In der Vorlesung wurde der Lernvorgang eines Schwellenwertelementes für das logische AND behandelt. Hier soll nun die logische Negation betrachtet werden.**
+
+| $x$ | $\neg x$|
+| :---: | :---: |
+| 0 | 1 |
+| 1 | 0 |
+
+**Geben Sie anhand einer anschaulichen Darstellung der Fehlerfunktion an, wie der Lernvorgang verläuft für**
 
 a) **Startwerte $w = 2$ und $\Theta = -2$, Lernrate $\frac{1}{3}$**
+
+Nach Delta-Regel:
+
+| Epoche | $x$ | $d=\neg x$ | $x*w$ | $f(x)$ | $\epsilon$ | $\Delta w$ | $\Delta \Theta$| $w$| $ \Theta$ |
+| :--- | :---: | :---: | :---: | :---: |
+| 1 | 0 | 1 | 0 | 0 | 1 |  0  | |  2  | -2 |
+| 2 | 1 | 0 | 2 | 0 | 1 |-1/3 | | 5/3 | - |
 
 b) **Startwerte $w = 1$ und $\Theta = 2$, Lernrate $\frac{1}{2}$**
 
