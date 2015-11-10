@@ -46,7 +46,7 @@ c) **Startwerte $w=2$ und $\Theta = 1$, Lernrate $\frac{1}{10}$**
 
 **Geben Sie eine geometrische Interpretation der Lernergebnisse an!**
 
-Habe die Delta-Regel angewandt. Delta w berechnet sich aus x*epsilon*Lernrate, Delta Theta berechnet sich aus d * epsilon
+Habe die Delta-Regel angewandt. Delta w berechnet sich aus x*epsilon*Lernrate, Delta Theta berechnet sich aus -epsilon*LERNRATE !! 
 
 zu a) Fehler immer zwishen 0 und -1 an den beiden Lernbeispielen, bis im letzten lernschritt fehler 1 im 1. beispiel und 0 im 2. --> Gewichte -1/3 und Theta 0
 
