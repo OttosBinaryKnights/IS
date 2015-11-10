@@ -4,11 +4,15 @@
 
 ---
 ## Aufgabe 13 Trainieren von Schwellenwertelementen
-**In der Vorlesung wurde der Lernvorgang eines Schwellenwertelementes für das logische AND behandelt. Hier soll nun die logische Negation betrachtet werden. Geben Sie anhand einer anschaulichen Darstellung der Fehlerfunktion an, wie der Lernvorgang verläuft für
-a) Startwerte w = 2 und θ = −2, Lernrate 1 , 3
-b) Startwerte w = 1 und θ = 2, Lernrate 1, 2
-c)Startwertew=2undθ=1,Lernrate 1. 10
-Geben Sie eine geometrische Interpretation der Lernergebnisse an!**
+**In der Vorlesung wurde der Lernvorgang eines Schwellenwertelementes für das logische AND behandelt. Hier soll nun die logische Negation betrachtet werden. Geben Sie anhand einer anschaulichen Darstellung der Fehlerfunktion an, wie der Lernvorgang verläuft für**
+
+a) **Startwerte $w = 2$ und $\Theta = -2$, Lernrate $\frac{1}{3}$**
+
+b) **Startwerte $w = 1$ und $\Theta = 2$, Lernrate $\frac{1}{2}$**
+
+c) **Startwerte $w=2$ und $\Theta = 1$, Lernrate $\frac{1}{10}$**
+
+**Geben Sie eine geometrische Interpretation der Lernergebnisse an!**
 
 ---
 ## Aufgabe 14 Trainieren von Schwellenwertelementen
@@ -16,7 +20,7 @@ Geben Sie eine geometrische Interpretation der Lernergebnisse an!**
 
 | $x_1$ | $x_2$ | $d=x_1 \land \neg x_2$ | $x*w$ | $y$ | $\epsilon$ | $\Delta w_1$ | $\Delta w_2$ | $\Delta \Theta$| $w_1$| $w_2$| $ \Theta$ |
 | :---: | :---: | :---: | :---: |
-| 0 | 0 | 0 |  0 | 0 | 1 | 
+| 0 | 0 | 0 |  0 | 0 | 1 |
 
 ---
 ## Aufgabe 15 Gradientenabstieg
