@@ -2,6 +2,24 @@
 ## Aufgabe 12 Schwellenwertelemente: Darstellung Boolescher Funktionen
 **Geben Sie einen Algorithmus an, der zu einer beliebigen gegebenen Booleschen Funktion f : {0, 1}n → {0, 1} ein Netz aus Schwellenwertelementen mit höchstens drei Schichten liefert, das diese Funktion berechnet! (Das Netz soll konstruiert, nicht durch Beispiele trainiert werden! Hinweis: vgl. Aufgaben des letzten Übungsblatts)**
 
+Idee: Disjunktive Normalform:
+Alle Funktionen $f = D_1 \lor D_2 \lor ... D_n$
+wobei D1 bis Dn jeweils aus Literalen L bestehen. 
+$D_i = L_i1 \land L_i2 \land ... L_ij$ , wobei $L_ik = x_k oder L_ik = \neg x_ik$
+
+$D_i$ ist ein Neuron
+
+$L_ij hat Gewichte w_ik = { 2 falls l_ik = x_k
+                            -2 falls l_ik = \neg x_k
+                            
+        Teta_i = j-1 + 1/2 \sum w_it$
+        
+        Ergebnis in der 3. Schicht
+  1 Ausgabeneuron mit n-Eingängen    
+  
+  (aus Neuronalen Netzen wo man zeigen soll dass jede Bool'sche Funktion mit Netzen aus 2 Schichten liefert. 3. Schicht sind die Eingaben selber (x_ik) Hat er ja in der Übung gesagt, dass es darauf ankommt ob man eingabeschicht mitzählt oder nicht. Zwischenschicht wäre dann mehrere Neuronen D_i und diese wiederum werden dann verundet in der 3. Schicht zu dem Ausgabeneuron.
+  
+
 ---
 ## Aufgabe 13 Trainieren von Schwellenwertelementen
 **In der Vorlesung wurde der Lernvorgang eines Schwellenwertelementes für das logische AND behandelt. Hier soll nun die logische Negation betrachtet werden.**
@@ -28,13 +46,30 @@ c) **Startwerte $w=2$ und $\Theta = 1$, Lernrate $\frac{1}{10}$**
 
 **Geben Sie eine geometrische Interpretation der Lernergebnisse an!**
 
+Habe die Delta-Regel angewandt. Delta w berechnet sich aus x*epsilon*Lernrate, Delta Theta berechnet sich aus d * epsilon
+
+zu a) Fehler immer zwishen 0 und -1 an den beiden Lernbeispielen, bis im letzten lernschritt fehler 1 im 1. beispiel und 0 im 2. --> Gewichte -1/3 und Theta 0
+
+b) Fehler schwankt immer zwischen 1 bzw. 0 und in nächster Epoche 1 bzw. -1  bis Gewicht -1/2 und Theta 0
+
+c) Fehler immer zwischen 1 und -1, lernrate ziemlich gering, nicht zu ende ausgerechnet...weil viele lernepochen nötig.
+
+
+
+
+
+
 ---
 ## Aufgabe 14 Trainieren von Schwellenwertelementen
 **Geben Sie den Ablauf des Lernvorgangs (Delta-Regel) eines Schwellenwertelementes für die Boolesche Funktion x1 ∧ ¬x2 an! (Am besten mithilfe einer Tabelle, die Spalten für die Werte von x1, x2, d = x1 ∧¬x2, x·w, y, e (Fehler), ∆w1, ∆w2, ∆θ, w1, w2 und θ enthält.) Verwenden Sie als Anfangsbelegung des Gewichtsvektors w = (0, 0, 0) und als Lernrate 1. Geben Sie eine geometrische Interpretation des Lernergebnisses an!**
 
+
 | $x_1$ | $x_2$ | $d=x_1 \land \neg x_2$ | $x*w$ | $y$ | $\epsilon$ | $\Delta w_1$ | $\Delta w_2$ | $\Delta \Theta$| $w_1$| $w_2$| $ \Theta$ |
 | :---: | :---: | :---: | :---: |
 | 0 | 0 | 0 |  0 | 0 | 1 |
+
+
+Endergebnis nach Deltaregel: w1 = 1, w2 = -2 Theta = 1
 
 ---
 ## Aufgabe 15 Gradientenabstieg
@@ -45,3 +80,25 @@ a) mit Startwert x0 = 3 und Lernrate η = 0.05,
 b) mit Startwert x0 = −0.5 und Lernrate η = 0.95,
 c) mit Startwert x0 = −2 und Lernrate η = 0.2.
 **Veranschaulichen Sie den Vorgang durch eine Skizze! Welche Probleme treten auf?**
+
+
+Gradientenabstieg:
+$x_{n+1} = x_n - Lernrate * grad f(x_n)$
+
+$grad f(x_n) = f'(x_n)$
+
+Habe als Ableitung folgendes erhalten: $f'(x) = 1/5 x^3 + 3/5 x^2 - 7/10 x - 17/10$
+
+Am besten mal die funktion bei wolfram alpha plotten lassen.
+
+a) konvergiert langsam von 3 auf 2,65 in immer kleineren schritten gegen 2 (x_6 war bei mir inklusive möglicher Rechenfehler 2,03)
+
+b) wir springen immer hin und her (siehe Plot) auf 0,6 nach 2,4 nach -0,35 auf 0,969 auf 2,5 usw.
+  Lernrate scheint zu groß zu sein.
+  
+c) Starten bei -2 und x_n wird immer kleiner (x_4 = -2,469)
+   Werden wohl im lokalen Minima (siehe Plot wolfram alpha) landen. 
+   
+Fazit: Beende Gradientenverfahren wenn die Änderung der Näherung einen Grenzwert unterschreitet.
+Lernrate zu groß führt zu ungünstigen Sprüngen.
+-> Gradientenabstiegsverfahren findet nur lokale Minima egal wie, aber man sollte die Lernrate vieleicht nach jedem Lernschritt anpassen, um schneller zu "guten" Ergebnissen zu kommen.
