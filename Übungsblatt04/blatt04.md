@@ -59,6 +59,7 @@ Nach Delta-Regel:
 
 b) **Startwerte $w = 1$ und $\Theta = 2$, Lernrate $\frac{1}{2}$**
 ![](Aufgabe13b.png)
+
 |  x  |  dw  |  dT | w | T |
 | :---: | :---: | :---: | :---: |
 |0|0.0 | -0.5 | 1.0 | 1.5 |
@@ -157,31 +158,39 @@ c) Fehler immer zwischen 1 und -1, lernrate ziemlich gering, nicht zu ende ausge
 ## Aufgabe 14 Trainieren von Schwellenwertelementen
 **Geben Sie den Ablauf des Lernvorgangs (Delta-Regel) eines Schwellenwertelementes für die Boolesche Funktion $x_1 \land \neg x_2$ an! (Am besten mithilfe einer Tabelle, die Spalten für die Werte von x1, x2, $d = x_1 \land \neg x_2$, x·w, y, e (Fehler), ∆w1, ∆w2, ∆θ, w1, w2 und θ enthält.) Verwenden Sie als Anfangsbelegung des Gewichtsvektors w = (0, 0, 0) und als Lernrate 1. Geben Sie eine geometrische Interpretation des Lernergebnisses an!**
 
-$d=x_1 \land \neg x_2$
+$$d=x_1 \land \neg x_2$$
+$$f: x*w \text{ (In diesem Fall math. korrekt wegen 3D Vektor w=(w1,w2,}\Theta)) f: \sum_{i=1}^{2}w_i*x_i$$
+$$y: f>=0$$
+$$e=d-y$$
+$$ \Delta w_1= e*n*x_1$$
+$$ \Delta w_2= e*n*x_2$$
+$$ \Delta \Theta= -e*n$$
+
+*ONLINE-VERFAHREN*
 
 |  | $x_1$ | $x_2$ | $d$ | $x*w$ | $y$ | $\epsilon$ | $\Delta w_1$ | $\Delta w_2$ | $\Delta \Theta$| $w_1$| $w_2$| $ \Theta$ |
 | :---: | :---: | :---: | :---: |
-|0|  0 |  0 | 0 |  0  | 1 | 1 |  0  |  0  |  1 |  0 |  0 | 1 |
+|0|  0 |  0 | 0 |  0  | 1 | -1 |  0  |  0  |  1 |  0 |  0 | 1 |
 | |  0 |  1 | 0| -1  | 0 | 0|  0  |  0  |  0|  0 |  0 | 1 |
 | |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 |  0 | 0 |
-| |  1 |  1 | 0|  1  | 1 | 1| -1  | -1  |  1|  0 | -1 | 1 |
+| |  1 |  1 | 0|  1  | 1 | -1| -1  | -1  |  1|  0 | -1 | 1 |
 ||
 |1|  0 |  0 | 0| -1  | 0 | 0|  0  |  0  |  0|  0 | -1 | 1 |
 | |  0 |  1 | 0| -2  | 0 | 0|  0  |  0  |  0|  0 | -1 | 1 |
 | |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 | -1 | 0 |
-| |  1 |  1 | 0|  0  | 1 | 1| -1  | -1  |  1|  0 | -2 | 1 |
+| |  1 |  1 | 0|  0  | 1 | -1| -1  | -1  |  1|  0 | -2 | 1 |
 ||
 |2|  0 |  0 | 0| -1  | 0 | 0|  0  |  0  |  0|  0 | -2 | 1 |
 | |  0 |  1 | 0| -3  | 0 | 0|  0  |  0  |  0|  0 | -2 | 1 |
 | |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 | -2 | 0 |
 | |  1 |  1 | 0| -1  | 0 | 0|  0  |  0  |  0|  1 | -2 | 0 |
 ||
-|3|  0 |  0 | 0|  0  | 1 | 1|  0  |  0  |  0|  1 | -2 | 0 |
+|3|  0 |  0 | 0|  0  | 1 | -1|  0  |  0  |  0|  1 | -2 | 0 |
 | |  0 |  1 | 0| -2  | 0 | 0|  0  |  0  |  0|  1 | -2 | 0 |
 | |  1 |  0 | 1| -1  | 0 | 1|  1  |  0  | -1|  1 | -2 | 0 |
 | |  1 |  1 | 0| -1  | 0 | 0|  0  |  0  |  0|  1 | -2 | 0 |
 ||
-|4|  0 |  0 | 0|  0  | 1 | 1|  0  |  0  |  1|  1 | -2 | 1 |
+|4|  0 |  0 | 0|  0  | 1 | -1|  0  |  0  |  1|  1 | -2 | 1 |
 | |  0 |  1 | 0| -3  | 0 | 0|  0  |  0  |  0|  1 | -2 | 1 |
 | |  1 |  0 | 1|  1  | 1 | 0|  0  |  0  |  0|  1 | -2 | 1 |
 | |  1 |  1 | 0| -2  | 0 | 0|  0  |  0  |  0|  1 | -2 | 1 |
@@ -195,6 +204,9 @@ $d=x_1 \land \neg x_2$
 Endergebnis nach Deltaregel: w1 = 1, w2 = -2 Theta = 1
 
 ![](Aufgabe14.jpg)
+
+Geradengleichung, umgestellte Neuronenformel:
+$y >= - \frac{w_1}{w_2} * x + \frac{\Theta}{w_2}$
 
 ---
 ## Aufgabe 15 Gradientenabstieg
