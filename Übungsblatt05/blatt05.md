@@ -4,6 +4,9 @@
 **Die biologische Evolutionstheorie wird z.B. von den sogenannten Kreationisten (die glauben, dass der Schöpfungsbericht der Bibel wortwörtlich richtig ist) heftig kritisiert, und zwar unter anderem mit dem folgenden Argument:
 „Die Evolutionstheorie kann die Komplexität der Lebewesen nicht erklären, denn sie beruht ja auf blindem, zufälligem Probieren. Sie behauptet im Grunde, dass man einen VW-Käfer erhalten kann, indem man einen Haufen Schrott in einen Kasten schüttet, und dann diesen Kasten lange genug schüttelt. Aber es ist doch offensichtlich, dass man so keine Autos bauen kann. Das Vorhandensein derart komplexer Dinge wie Autos, geschweige denn Lebewesen, kann man nur durch Annahme eines Schöpfers erklären.“**
 * **a) Was ist an dem Argument richtig, was falsch?**
+
+ In der biologischen Evolutionstheorie entwickeln sich die Eigenschaften zwar zufällig, jedoch der Nutzen einer Eigenschaft wird durch die Umwelt in Frage gestellt. So bestimmen die Umwelteinflüsse das Fortschreiten der Evolution.
+ Es erfolgt eine natürliche Auslese. Diese Auslese erfolgt in dem Kasten nicht.
 * **b) Was würden Sie einem Kreationisten, der dieses Argument vorträgt, antworten?**
 * **c) Warum funktionieren evolutionäre Algorithmen (obwohl gegen sie ein analoges Argument vorgebracht werden kann)?**
 
@@ -14,11 +17,13 @@ Das nebenstehende Diagramm zeigt keine Lösung des 8- Damen-Problems, da nur si
 Geben Sie an, wie man das n-Damen-Problem mithilfe eines evolutionären Algorithmus lösen könnte. Gehen Sie dabei auf die folgenden Punkte ein:**
 
  ![Schachbrett](Schachbrett.png)
-* **a) Erklären Sie die Elemente eines evolutionären Algorithmus mithilfe des generischen Grund- algorithmus aus der Vorlesung.**
+* **a) Erklären Sie die Elemente eines evolutionären Algorithmus mithilfe des generischen Grundalgorithmus aus der Vorlesung.**
 * **b) Versuchen Sie anschaulich zu machen, wie der evolutionäre Algorithmus eine Lösung findet.**
 * **c) Entwerfen Sie eine Kodierung für die Lösungskandidaten, sodass jeder Kandidat anhand einer Zeichenkette eindeutig beschrieben werden kann.**
 
  Hinweis: In jeder Zeile kann nur eine Dame stehen. Lösungen mit mehr als einer Dame in einer Zeile können so schon durch die Kodierung ausgeschlossen werden.**
+
+ 
 * **d) Welche Fitnessfunktion käme in Frage? Welche Variations- und Rekombinationsoperatoren wären geeignet?**
 * **e) Welche Funktion haben Variation und Rekombination anschaulich?**
 
