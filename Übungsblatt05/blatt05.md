@@ -4,11 +4,17 @@
 **Die biologische Evolutionstheorie wird z.B. von den sogenannten Kreationisten (die glauben, dass der Schöpfungsbericht der Bibel wortwörtlich richtig ist) heftig kritisiert, und zwar unter anderem mit dem folgenden Argument:
 „Die Evolutionstheorie kann die Komplexität der Lebewesen nicht erklären, denn sie beruht ja auf blindem, zufälligem Probieren. Sie behauptet im Grunde, dass man einen VW-Käfer erhalten kann, indem man einen Haufen Schrott in einen Kasten schüttet, und dann diesen Kasten lange genug schüttelt. Aber es ist doch offensichtlich, dass man so keine Autos bauen kann. Das Vorhandensein derart komplexer Dinge wie Autos, geschweige denn Lebewesen, kann man nur durch Annahme eines Schöpfers erklären.“**
 * **a) Was ist an dem Argument richtig, was falsch?**
-
- In der biologischen Evolutionstheorie entwickeln sich die Eigenschaften zwar zufällig, jedoch der Nutzen einer Eigenschaft wird durch die Umwelt in Frage gestellt. So bestimmen die Umwelteinflüsse das Fortschreiten der Evolution.
- Es erfolgt eine natürliche Auslese. Diese Auslese erfolgt in dem Kasten nicht.
+  * *falsch:* Komplexe kombination (Mutation, Selektion, Genfluss und Gendrift) - kein reines Schütteln (man müsste autobauer und Schweisser mitschütteln)
+  * *falsch:* nicht zufälliges Probieren -> beste Anpassung setzt sich durch
+  * *falsch:* Es erfolgt eine natürliche Auslese. Diese Auslese erfolgt in dem Kasten nicht.
 * **b) Was würden Sie einem Kreationisten, der dieses Argument vorträgt, antworten?**
+  * nicht vergleichbar, da Änderungen in der Biologie durch Mutation, Selektion, Genfluss und Gendrift möglich <-> Metallverarbeitung nicht
+  * Genfluss nicht möglich (geschlossene Box)
+  * Es fehlt an einer Auswahlmethode (Fitnessfunktion)
+
 * **c) Warum funktionieren evolutionäre Algorithmen (obwohl gegen sie ein analoges Argument vorgebracht werden kann)?**
+  * Simulieren Evolution durch aufstellen einer Auswahlmethode und immer wiederkehrende Änderungen der "Kandidaten"
+  * *welches analoge Argument ist gemeint?*
 
 ---
 ## Aufgabe 17 n-Damen-Problem
@@ -18,13 +24,45 @@ Geben Sie an, wie man das n-Damen-Problem mithilfe eines evolutionären Algorit
 
  ![Schachbrett](Schachbrett.png)
 * **a) Erklären Sie die Elemente eines evolutionären Algorithmus mithilfe des generischen Grundalgorithmus aus der Vorlesung.**
+
+```
+Algorithmus 1 EA-Schema
+Eingabe: Optimierungsproblem t←0
+  pop(t) ← Erzeuge Population der Größe μ /*(2) Anfangspopulation*/
+  Bewerte pop(t) /*(3) Bewertungsfunktion*/
+  while not Terminierungsbedingung /*(7)*/ {
+    pop1 ← Selektiere Eltern für λ Nachkommen aus pop(t)
+    pop2 ← /*(5) - Crossover*/
+    pop3 ← Mutiere die Individuen in pop2 /*(5) - Mutation*/
+    Bewerte pop3 /*(3) Bewertungsfunktion*/
+    t←t+1
+    pop(t) /*(4) Auswahlmethode*/
+  }
+return Bestes Individuum aus pop(t)
+```
+
+  1. *Kodierungsvorschrift*: Kodierung der Lösungskadidaten (im Grundalgorithmus nicht gegeben)
+  * *Anfangspopulation*
+  * *Bewertungsfunktion*: Umgebung darstellen und Güte der Individuen bestimmend
+  * *Auswahlmethode*: Wählt unverändert Individuen in nächste Generation
+  * *Genetische Operatoren*:
+    * Mutation (Zufälliger Veränderung)
+    * Crossover (Zerteilt und Rekombiniert)
+  * *Parameterwerte* (Populationsgröße, Mutationsw'keit)
+  * *Abbruchkriterium* (Mindestgüte, max. Generationenanz, Genanz ohne Verbesserung)
+
 * **b) Versuchen Sie anschaulich zu machen, wie der evolutionäre Algorithmus eine Lösung findet.**
+
+
 * **c) Entwerfen Sie eine Kodierung für die Lösungskandidaten, sodass jeder Kandidat anhand einer Zeichenkette eindeutig beschrieben werden kann.**
 
- Hinweis: In jeder Zeile kann nur eine Dame stehen. Lösungen mit mehr als einer Dame in einer Zeile können so schon durch die Kodierung ausgeschlossen werden.**
+  *Hinweis: In jeder Zeile kann nur eine Dame stehen. Lösungen mit mehr als einer Dame in einer Zeile können so schon durch die Kodierung ausgeschlossen werden.*
 
- 
+Array mit n-Feldern, Feld = Zeile, Wert = Spalte
+
 * **d) Welche Fitnessfunktion käme in Frage? Welche Variations- und Rekombinationsoperatoren wären geeignet?**
+
+
 * **e) Welche Funktion haben Variation und Rekombination anschaulich?**
 
 ---
