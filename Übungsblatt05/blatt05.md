@@ -3,10 +3,12 @@
 ## Aufgabe 16 Evolutionstheorie
 **Die biologische Evolutionstheorie wird z.B. von den sogenannten Kreationisten (die glauben, dass der Schöpfungsbericht der Bibel wortwörtlich richtig ist) heftig kritisiert, und zwar unter anderem mit dem folgenden Argument:
 „Die Evolutionstheorie kann die Komplexität der Lebewesen nicht erklären, denn sie beruht ja auf blindem, zufälligem Probieren. Sie behauptet im Grunde, dass man einen VW-Käfer erhalten kann, indem man einen Haufen Schrott in einen Kasten schüttet, und dann diesen Kasten lange genug schüttelt. Aber es ist doch offensichtlich, dass man so keine Autos bauen kann. Das Vorhandensein derart komplexer Dinge wie Autos, geschweige denn Lebewesen, kann man nur durch Annahme eines Schöpfers erklären.“**
+
 * **a) Was ist an dem Argument richtig, was falsch?**
-  * *falsch:* Komplexe kombination (Mutation, Selektion, Genfluss und Gendrift) - kein reines Schütteln (man müsste autobauer und Schweisser mitschütteln)
+  * *falsch:* Komplexe Kombination (Mutation, Selektion, Genfluss und Gendrift) - kein reines Schütteln (man müsste autobauer und Schweisser mitschütteln)
   * *falsch:* nicht zufälliges Probieren -> beste Anpassung setzt sich durch
   * *falsch:* Es erfolgt eine natürliche Auslese. Diese Auslese erfolgt in dem Kasten nicht.
+
 * **b) Was würden Sie einem Kreationisten, der dieses Argument vorträgt, antworten?**
   * nicht vergleichbar, da Änderungen in der Biologie durch Mutation, Selektion, Genfluss und Gendrift möglich <-> Metallverarbeitung nicht
   * Genfluss nicht möglich (geschlossene Box)
@@ -78,20 +80,19 @@ return Bestes Individuum aus pop(t)
 ![eine mögliche Lösung](Aufgabe18_possSolution.svg)
 
 * **a) Betrachten Sie eine (politische) Karte von Mitteleuropa mit den Staaten Belgien, Deutschland, Frankreich, Luxemburg, Niederlande, Österreich, Polen, Schweiz, Slowakei, Tschechische Republik und Ungarn. Wie kann man für diese Karte eine dem Vierfarbensatz genügende Färbung mithilfe eines evolutionären Algorithmus finden?**
-  * Karte als Graph
+  * Karte als Graph:
     * Länder als Knoten
     * Gemeinsame Grenzen als Kanten
-  * *Terminierungsbedingung*: keine Konflikte
-  * *Fitnessfunktion:* Anzahl der Kollissionen
+  * *Terminierungsbedingung*: keine Konflikte mehr
+  * *Fitnessfunktion:* Anzahl der Kollissionen (minimieren)
   * *Kombination*: Gleiche Färbung von Knoten -> Kindgraph gleiche Färbung für diesen Knoten
   * *Variationsfunktion*: Zufällig zwei Spalten im Array tauschen
 
-  ![eine mögliche Lösung](Aufgabe18_Knoten.svg)
-
 * **b) Verallgemeinern Sie den Ansatz aus Teilaufgabe a) auf beliebige Graphenfärbungsprobleme: Bestimmen von Farben für die Knoten eines Graphen, sodass keine zwei Knoten, die durch eine Kante verbunden sind, gleiche Farbe haben.**
   * da a) auch Lösung als Knoten und Kanten, gleicher Ansatz.
+    ![Graphendarstellung](Aufgabe18_Knoten.svg)
 
 ---
 ## Aufgabe 19 Genetische Programmierung: SR-Agent
-**Geben Sie einen Algorithmus an, der einen zufälligen Lisp/Scheme-Ausdruck erzeugt, wie er in der Vorlesung zur Darstellung der Programme für den Stimulus-Response-Agenten der Gitter- welt verwendet wurde!
-Verwenden Sie als Operatoren if, and, or und not and als Konstanten/Variablen east, north, west, south (Aktionen), s1, s2, . . . , s8 (Sensoreingaben). Sehen Sie als Parameter die maximale Verschachtelungstiefe des Ausdrucks vor.**
+**Geben Sie einen Algorithmus an, der einen zufälligen Lisp/Scheme-Ausdruck erzeugt, wie er in der Vorlesung zur Darstellung der Programme für den Stimulus-Response-Agenten der Gitterwelt verwendet wurde!
+Verwenden Sie als Operatoren if, and, or und not und als Konstanten/Variablen east, north, west, south (Aktionen), s1, s2, ... , s8 (Sensoreingaben). Sehen Sie als Parameter die maximale Verschachtelungstiefe des Ausdrucks vor.**
