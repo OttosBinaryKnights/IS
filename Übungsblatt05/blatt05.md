@@ -64,7 +64,7 @@ return Bestes Individuum aus pop(t)
  * Es können niemals in zwei gleiche Werte im Array vorkommen!
 
 * **d) Welche Fitnessfunktion käme in Frage? Welche Variations- und Rekombinationsoperatoren wären geeignet?**
- * Fitnessfunktion = Anzahl Konflikte
+ * *Fitnessfunktion* = Anzahl Konflikte
  * *Kombination*: Gleiche Position an einer Stelle in Array -> Kind ebenfalls
  * *Variationsfunktion*: Zufällig zwei Spalten im Array tauschen
 
@@ -74,8 +74,22 @@ return Bestes Individuum aus pop(t)
 ---
 ## Aufgabe 18 Vierfarbenproblem
 **Das Vierfarbenproblem ist eines der berühmtesten Probleme der Mathematik. Es besteht aus der Frage, ob jede Landkarte mit höchstens vier Farben so eingefärbt werden kann, dass keine zwei Staaten mit gemeinsamer Grenze die gleiche Farbe haben. Dieses Problem, das im Jahre 1852 von Francis Guthrie aufgeworfen wurde (publiziert 1878), war lange ungelöst. Erst im Jahre 1976 konnten Wolfgang Haken und Kenneth Appel den Vierfarbensatz mithilfe eines umfangreichen Computerprogramms beweisen.**
+
+![eine mögliche Lösung](Aufgabe18_possSolution.svg)
+
 * **a) Betrachten Sie eine (politische) Karte von Mitteleuropa mit den Staaten Belgien, Deutschland, Frankreich, Luxemburg, Niederlande, Österreich, Polen, Schweiz, Slowakei, Tschechische Republik und Ungarn. Wie kann man für diese Karte eine dem Vierfarbensatz genügende Färbung mithilfe eines evolutionären Algorithmus finden?**
-* **b) Verallgemeinern Sie den Ansatz aus Teilaufgabe a) auf beliebige Graphenfärbungsproble- me: Bestimmen von Farben für die Knoten eines Graphen, sodass keine zwei Knoten, die durch eine Kante verbunden sind, gleiche Farbe haben.**
+  * Karte als Graph
+    * Länder als Knoten
+    * Gemeinsame Grenzen als Kanten
+  * *Terminierungsbedingung*: keine Konflikte
+  * *Fitnessfunktion:* Anzahl der Kollissionen
+  * *Kombination*: Gleiche Färbung von Knoten -> Kindgraph gleiche Färbung für diesen Knoten
+  * *Variationsfunktion*: Zufällig zwei Spalten im Array tauschen
+
+  ![eine mögliche Lösung](Aufgabe18_Knoten.svg)
+
+* **b) Verallgemeinern Sie den Ansatz aus Teilaufgabe a) auf beliebige Graphenfärbungsprobleme: Bestimmen von Farben für die Knoten eines Graphen, sodass keine zwei Knoten, die durch eine Kante verbunden sind, gleiche Farbe haben.**
+  * da a) auch Lösung als Knoten und Kanten, gleicher Ansatz.
 
 ---
 ## Aufgabe 19 Genetische Programmierung: SR-Agent
