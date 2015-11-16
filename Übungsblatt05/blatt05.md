@@ -52,19 +52,25 @@ return Bestes Individuum aus pop(t)
   * *Abbruchkriterium* (Mindestgüte, max. Generationenanz, Genanz ohne Verbesserung)
 
 * **b) Versuchen Sie anschaulich zu machen, wie der evolutionäre Algorithmus eine Lösung findet.**
-
+![](Aufgabe17b.jpg)
 
 * **c) Entwerfen Sie eine Kodierung für die Lösungskandidaten, sodass jeder Kandidat anhand einer Zeichenkette eindeutig beschrieben werden kann.**
 
   *Hinweis: In jeder Zeile kann nur eine Dame stehen. Lösungen mit mehr als einer Dame in einer Zeile können so schon durch die Kodierung ausgeschlossen werden.*
 
-Array mit n-Feldern, Feld = Zeile, Wert = Spalte
+ * Array mit n-Feldern
+    * Position im Array = Zeile
+    * Wert = Spalte
+ * Es können niemals in zwei gleiche Werte im Array vorkommen!
 
 * **d) Welche Fitnessfunktion käme in Frage? Welche Variations- und Rekombinationsoperatoren wären geeignet?**
-
+ * Fitnessfunktion = Anzahl Konflikte
+ * *Kombination*: Gleiche Position an einer Stelle in Array -> Kind ebenfalls
+ * *Variationsfunktion*: Zufällig zwei Spalten im Array tauschen
 
 * **e) Welche Funktion haben Variation und Rekombination anschaulich?**
-
+ * *Rekombination*: "Bewertes erhalten"
+ * *Variation*: "Ggf. bessere Optionen finden"
 ---
 ## Aufgabe 18 Vierfarbenproblem
 **Das Vierfarbenproblem ist eines der berühmtesten Probleme der Mathematik. Es besteht aus der Frage, ob jede Landkarte mit höchstens vier Farben so eingefärbt werden kann, dass keine zwei Staaten mit gemeinsamer Grenze die gleiche Farbe haben. Dieses Problem, das im Jahre 1852 von Francis Guthrie aufgeworfen wurde (publiziert 1878), war lange ungelöst. Erst im Jahre 1976 konnten Wolfgang Haken und Kenneth Appel den Vierfarbensatz mithilfe eines umfangreichen Computerprogramms beweisen.**
