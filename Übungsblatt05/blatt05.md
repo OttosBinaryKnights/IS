@@ -15,8 +15,8 @@
   * Es fehlt an einer Auswahlmethode (Fitnessfunktion)
 
 * **c) Warum funktionieren evolutionäre Algorithmen (obwohl gegen sie ein analoges Argument vorgebracht werden kann)?**
-  * Simulieren Evolution durch aufstellen einer Auswahlmethode und immer wiederkehrende Änderungen der "Kandidaten"
-  * *welches analoge Argument ist gemeint?*
+  * Simulieren Evolution durch Aufstellen einer Auswahlmethode und immer wiederkehrende Änderungen der "Kandidaten"
+  * analoges Argument: "Es ist nichts anderes als Ausprobieren/intelligenteres BruteForcing" -> Klappt aber
 
 ---
 ## Aufgabe 17 n-Damen-Problem
