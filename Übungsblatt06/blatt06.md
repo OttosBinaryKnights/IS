@@ -21,6 +21,7 @@ a) **Informieren Sie sich über das sogenannte „Sandhaufen-Paradoxon“ bzw. 
 Das ist eine Aussage, die wir intuitiv nicht akzeptieren wollen.
 
  **Zu welchem Zweck wird es im Kontext der klassischen Logik angeführt?**
+ * Die Haufenparadoxie wird häufig als Argument für die Fuzzylogik angeführt
 
   **Wo liegen die Probleme in der Modellierung des im Paradoxon enthaltenen und anderer natürlichsprachlicher Konzepte?**
 
@@ -38,6 +39,9 @@ b) **Betrachten Sie die folgenden natürlichsprachlichen Ausdrücke:**
 
 **Geben Sie anhand von Diagrammen mit von Ihnen selbst gewählten Skaleneinteilungen zu den jeweiligen Ausdrücken passende Fuzzy-Repräsentationen an.**
 
+![Das Auto fährt langsam/schnell](21b_auto.svg)
+![Der Güterzug ist kurz/lang](21b_zug.svg)
+![Der Güterzug ist kurz/lang](21b_wasser.svg)
 ---
 ## Aufgabe 22: Fuzzy-Regelung
 **In der Mensa steht eine Zapfanlage, die aus einem Behälter besteht, in dem sich Wasser befindet, das mit Brause-Konzentrat versetzt wird. An dem Behälter sei ein stufenlos regelbarer Anschluss an eine Wasserleitung angebracht und ein Hahn, der zum Abzapfen der Brause dient.
