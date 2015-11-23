@@ -1,10 +1,10 @@
 # Übungsblatt 6
 
 ## Aufgabe 20: Mehrwertige Logiken
-**Betrachten Sie die n-wertigen Logiken $L_n(n\leq 2)$ mit den Wahrheitswerten $T=\biggl\{0=\frac{0}{n-1}, \frac{1}{n-1}, \frac{2}{n-1}, ... ,\frac{n-2}{n-1}, \frac{n-1}{n-1}=1\biggl\}$. Die logischen Verknüpfungen in $L_n$ seien wie folgt definiert:
+**Betrachten Sie die n-wertigen Logiken $L_n(n\leq 2)$ mit den Wahrheitswerten $T=\biggl\{0=\frac{0}{n-1}, \frac{1}{n-1}, \frac{2}{n-1}, ... ,\frac{n-2}{n-1}, \frac{n-1}{n-1}=1\biggl\}$. Die logischen Verknüpfungen in $L_n$ seien wie folgt definiert:**
 ![Formel](Formeln.png)
 
-Offensichtlich entspricht die Logik $L_2$ mit den Wahrheitswerten $T_2 = \{0, 1\}$ der klassischen, zweiwertigen Aussagenlogik.**
+**Offensichtlich entspricht die Logik $L_2$ mit den Wahrheitswerten $T_2 = \{0, 1\}$ der klassischen, zweiwertigen Aussagenlogik.**
 
 * a) **Berechnen Sie die Wahrheitswerte von folgendem logischen Ausdruck in der dreiwertigen Logik $L_3$ für alle Kombinationen von $T_3$ der logischen Variablen $x, y, z$ in der Formel $(x \rightarrow y) \land (y \rightarrow z)$.**
 
