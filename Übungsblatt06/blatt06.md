@@ -11,12 +11,27 @@ Offensichtlich entspricht die Logik $L_2$ mit den Wahrheitswerten $T_2 = \{0, 1\
 * b) **Berechnen Sie in der vierwertigen Logik $L_4$ die Wahrheitstabelle für die Formel $x \leftrightarrow y$.**
 
 ---
-## Aufgabe 21: Fuzzy-Logik**
-* a) **Informieren Sie sich über das sogenannte „Sandhaufen-Paradoxon“ bzw. Sorites-Paradoxon. Beachten Sie dabei insbesondere die folgenden Fragestellungen:**
- * **Zu welchem Zweck wird es im Kontext der klassischen Logik angeführt?**
- * **Wo liegen die Probleme in der Modellierung des im Paradoxon enthaltenen und anderer natürlichsprachlicher Konzepte?**
- * **Welche Möglichkeiten bietet die Einführung von Fuzzy-Logik in diesem Zusammen- hang?**
-* b) **Betrachten Sie die folgenden natürlichsprachlichen Ausdrücke:**
+## Aufgabe 21: Fuzzy-Logik
+a) **Informieren Sie sich über das sogenannte „Sandhaufen-Paradoxon“ bzw. Sorites-Paradoxon. Beachten Sie dabei insbesondere die folgenden Fragestellungen:**
+
+ * 100 Sandkörner = ein Haufen sind
+ * Haufen - 1 = weiterhin einen Haufen.
+ * Weil 100 Sandkörner ein Haufen sind, sind auch 99 Sandkörner ein Haufen; weil aber 99 Sandkörner ein Haufen sind, sind auch 98 Sandkörner ein Haufen usw.
+ * -> bereits ein Sandkorn ist ein Haufen.
+Das ist eine Aussage, die wir intuitiv nicht akzeptieren wollen.
+
+ **Zu welchem Zweck wird es im Kontext der klassischen Logik angeführt?**
+
+  **Wo liegen die Probleme in der Modellierung des im Paradoxon enthaltenen und anderer natürlichsprachlicher Konzepte?**
+
+    * "Haufen" ist ein unpräziser Begriff
+      * keine definierte Mindestanzahl
+      * erforderliche räumliche Anordnung (Anordnung in Linie ist kein Haufen!)
+
+  **Welche Möglichkeiten bietet die Einführung von Fuzzy-Logik in diesem Zusammenhang?**
+    * Unscharfe Grenzen können berücksichtigt werden
+
+b) **Betrachten Sie die folgenden natürlichsprachlichen Ausdrücke:**
  * **Das Auto fährt langsam/schnell.**
  * **Der Güterzug ist kurz/lang.**
  * **Das Wasser ist kalt / lauwarm / heiß.**
