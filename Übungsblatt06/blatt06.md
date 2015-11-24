@@ -113,7 +113,24 @@ b) **Betrachten Sie die folgenden natürlichsprachlichen Ausdrücke:**
 ---
 ## Aufgabe 22: Fuzzy-Regelung
 **In der Mensa steht eine Zapfanlage, die aus einem Behälter besteht, in dem sich Wasser befindet, das mit Brause-Konzentrat versetzt wird. An dem Behälter sei ein stufenlos regelbarer Anschluss an eine Wasserleitung angebracht und ein Hahn, der zum Abzapfen der Brause dient.
-Gerade zu Stoßzeiten ist der Behälter häufig leer, da viel Brause getrunken wird und das Perso- nal nicht ständig die Zapfanlage im Auge behalten und ggf. nachfüllen kann. Die Abteilungslei- terin des Studentenwerks erkennt das Problem und beauftragt Sie, eine Lösung dafür zu finden. Wegen der stark variierenden Nachfrage an Brause entschließen Sie sich, einen Fuzzy-Regler zu entwerfen.
-Hinweis: Sie können davon ausgehen, dass beim Auffüllen des Wassers automatisch eine ad- äquate Menge Brausekonzentrat nachgefüllt wird, und dass ein Quirl in der Zapfanlage die Bestandteile direkt vermischt.**
-* a) **Identifizieren Sie alle linguistische Variablen und deren Werte.**
-* b) **Geben Sie problemkonforme Fuzzy-Regeln an.**
+Gerade zu Stoßzeiten ist der Behälter häufig leer, da viel Brause getrunken wird und das Personal nicht ständig die Zapfanlage im Auge behalten und ggf. nachfüllen kann. Die Abteilungsleiterin des Studentenwerks erkennt das Problem und beauftragt Sie, eine Lösung dafür zu finden. Wegen der stark variierenden Nachfrage an Brause entschließen Sie sich, einen Fuzzy-Regler zu entwerfen.**
+
+*Hinweis: Sie können davon ausgehen, dass beim Auffüllen des Wassers automatisch eine adäquate Menge Brausekonzentrat nachgefüllt wird, und dass ein Quirl in der Zapfanlage die Bestandteile direkt vermischt.*
+
+a) **Identifizieren Sie alle linguistische Variablen und deren Werte.**
+  * Wasserzuleitung:
+    geschlossen, niedrig, mittel, erhöhrt
+  * Füllstand:
+    leer, gefüllt, voll
+  * Abzapffluss:
+    geschlossen, niedrig, mittel, erhöhrt
+  
+b) **Geben Sie problemkonforme Fuzzy-Regeln an.**
+```
+  WENN Füllstand = leer DANN Wasserzuleitung = erhöht
+  WENN Füllstand = voll DANN Wasserzuleitung = geschlossen
+  WENN Abzapffluss = niedrig DANN Wasserzuleitung = niedrig
+  WENN Abzapffluss = mittel DANN Wasserzuleitung = mittel
+  WENN Abzapffluss = erhöht DANN Wasserzuleitung = erhöht
+
+```
