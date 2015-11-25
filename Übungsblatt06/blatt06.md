@@ -49,33 +49,35 @@ $$F(x,y,z)=(x \rightarrow y) \land (y \rightarrow z)$$
 |   1   |   1   |   0   |        1         |         1        |      1     |
 |   1   |   1   |   0   |        1         |         1        |      1     |
 
+für z=1 noch fortsetzen
+
 Verkürzung möglich durch Transitivität der Implikation? $F(x,y,z)=(x \rightarrow z)$
 
 * b) **Berechnen Sie in der vierwertigen Logik $L_4$ die Wahrheitstabelle für die Formel $x \leftrightarrow y$.**
 
-$$T_4=\{0, \frac12 , \frac13 , 1\}$$
+$$T_4=\{0, \frac13 , \frac23 , 1\}$$
 $$F(x,y)= x \leftrightarrow y$$
 
 |     x     |     y     | $x\leftrightarrow y$ |
 | :-------: | :-------: | :------------------: |
 |     0     |     0     |           1          |
-|     0     | $\frac12$ |           0          |
 |     0     | $\frac13$ |           0          |
+|     0     | $\frac23$ |           0          |
 |     0     |     1     |           0          |
 | :-------: | :-------: | :------------------: |
-| $\frac12$ |     0     |           0          |
-| $\frac12$ | $\frac12$ |           1          |
-| $\frac12$ | $\frac13$ |       $\frac12$      |
-| $\frac12$ |     1     |       $\frac12$      |
-| :-------: | :-------: | :------------------: |
 | $\frac13$ |     0     |           0          |
-| $\frac13$ | $\frac12$ |       $\frac12$      |
 | $\frac13$ | $\frac13$ |           1          |
+| $\frac13$ | $\frac23$ |       $\frac13$      |
 | $\frac13$ |     1     |       $\frac13$      |
 | :-------: | :-------: | :------------------: |
+| $\frac23$ |     0     |           0          |
+| $\frac23$ | $\frac13$ |       $\frac13$      |
+| $\frac23$ | $\frac23$ |           1          |
+| $\frac23$ |     1     |       $\frac23$      |
+| :-------: | :-------: | :------------------: |
 |     1     |     0     |           0          |
-|     1     | $\frac12$ |       $\frac12$      |
 |     1     | $\frac13$ |       $\frac13$      |
+|     1     | $\frac23$ |       $\frac23$      |
 |     1     |     1     |           1          |
 
 ---
@@ -124,7 +126,7 @@ a) **Identifizieren Sie alle linguistische Variablen und deren Werte.**
     leer, gefüllt, voll
   * Abzapffluss:
     geschlossen, niedrig, mittel, erhöhrt
-  
+
 b) **Geben Sie problemkonforme Fuzzy-Regeln an.**
 ```
   WENN Füllstand = leer DANN Wasserzuleitung = erhöht
