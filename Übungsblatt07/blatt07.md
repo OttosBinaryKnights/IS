@@ -1,7 +1,10 @@
 # 7. Übungsblatt
+*found on [github.com/OttosBinaryKnights/IS](https://github.com/OttosBinaryKnights/IS)*
 ## Aufgabe 23 Bedingte Wahrscheinlichkeiten
 a) **Vier Kugeln werden der Reihe nach auf vier Kästen verteilt, wobei alle 44 Reihenfolgen gleichwahrscheinlich sein mögen. Wie groß ist die Wahrscheinlichkeit, dass ein Kasten genau drei Kugeln enthält, wenn die ersten beiden Kugeln in verschiedene Kästen gelegt werden?**
+
 b) **Über eine bestimmte Familie sei bekannt, dass sie zwei Kinder hat. Wie groß ist die Wahrscheinlichkeit, dass beide Kinder Mädchen sind, wenn bekannt ist, dass mindestens ein Kind ein Mädchen ist?**
+
 c) **Wie groß ist die Wahrscheinlichkeit in Teilaufgabe b), wenn bekannt ist, dass das jüngere Kind ein Mädchen ist?**
 
 ---
@@ -14,15 +17,15 @@ a) **Ein Glücksrad habe 36 numerierte Sektoren (Zahlen 1 bis 36). Die Sektoren
 |   36  |   35  |   34  |   33  |   32  |   31  |   30  |   29  |   28  |   27  |   26  |   25  |   24  |   23  |   22  |   21  |   20  |   19  |
 
  **Wir betrachten die drei Ereignisse**
-* A: **das Glücksrad hält in einem roten Sektor,**
-* B: **das Glücksrad hält in einem Sektor mit einer geraden Zahl,**
-* C: **das Glücksrad hält in einem Sektor mit einer Zahl ≤ 18.**
+* $A:$ **das Glücksrad hält in einem roten Sektor,**
+* $B:$ **das Glücksrad hält in einem Sektor mit einer geraden Zahl,**
+* $C:$ **das Glücksrad hält in einem Sektor mit einer Zahl ≤ 18.**
 **Zeigen Sie, dass die Ereignisse paarweise, aber nicht vollständig$^1 $ unabhängig sind!**
 
 b) **Zwei faire Würfel, ein roter und ein weißer, werden geworfen. Wir betrachten die drei Ereignisse**
- * A: **der rote Würfel zeigt eine 1 oder eine 2,**
- * B: **der weiße Würfel zeigt eine 3, 4 oder 5,**
- * C: **die Summe der Augenzahlen ist 4, 11 oder 12.**
+ * $A:$ **der rote Würfel zeigt eine 1 oder eine 2,**
+ * $B:$ **der weiße Würfel zeigt eine 3, 4 oder 5,**
+ * $C:$ **die Summe der Augenzahlen ist 4, 11 oder 12.**
 **Zeigen Sie, dass die Ereignisse vollständig, aber nicht paarweise unabhängig sind!**
 
 
