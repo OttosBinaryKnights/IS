@@ -85,6 +85,12 @@ $P(C) = \frac{6}{36}$;
 
 a) **In einer gegebenen Population leiden 2 % aller Menschen an einer bestimmten Krankheit. Ein Test habe die Eigenschaft, dass er bei Kranken in 95 % und bei Gesunden in 99 % aller Fälle die richtige Diagnose stellt. Wie groß ist die Wahrscheinlichkeit dafür, dass eine Person, bei der auf Grund des Tests die Krankheit (nicht) diagnostiziert wird, auch tatsächlich (nicht) an dieser Krankheit leidet?**
 
+|   | Krank | Gesund |
+| --- | --- | --- |
+| Pos | 0.019 | 0.0098 |
+| Neg | 0.001 | 0.9702 |
+
+
 b) **Etwa 5 von 100 Männern und etwa 25 von 10 000 Frauen sind farbenblind. Eine farben- blinde Person werde zufällig ausgewählt. Wie groß ist die Wahrscheinlichkeit, dass diese Person ein Mann ist?**
 
 c) **Gegeben seien zwei Urnen. Urne 1 enthalte zwei weiße und eine rote Kugel, Urne 2 eine weiße und zwei rote. Es werde zuerst zufällig eine Kugel aus Urne 1 gezogen und in Urne 2 gelegt. Anschließend wird zufällig eine Kugel aus der Urne 2 gezogen. Angenommen, die aus Urne 2 gezogene Kugel sei rot: Wie groß ist die Wahrscheinlichkeit, dass die aus Urne 1 in Urne 2 überführte Kugel weiß war?**
@@ -93,5 +99,6 @@ c) **Gegeben seien zwei Urnen. Urne 1 enthalte zwei weiße und eine rote Kugel, 
 ## Aufgabe 26 Ameisenkolonieoptimierung
 
 a) **Zeigen Sie am Beispiel des Doppelbrückenexperiments, dass die Ameisen nicht den kürzesten Pfad finden, wenn Sie nur auf dem Hinweg zur Futterquelle oder auf dem Rückweg von der Futterquelle Pheromon ablegen!**
+
 
 b) **Zeigen Sie am Beispiel des Doppelbrückenexperiments, dass die Ameisen, wenn sie mit einem Gedächtnis ausgestattet werden, das es ihnen erlaubt, ihren Weg vom Nest zur Futterquelle zurückzuverfolgen (backtrace), auch dann den kürzesten Pfad finden, wenn Sie nur auf dem Rückweg Pheromon ablegen!**
