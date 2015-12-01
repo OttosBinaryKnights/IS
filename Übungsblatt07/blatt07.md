@@ -83,6 +83,8 @@ $P(C) = \frac{6}{36}$;
 
 ## Aufgabe 25 Der Bayessche Satz
 
+$$P(A|B) = \frac{P(A \cap B)}{P(A)} = \frac{P(B|A)P(A)}{P(B)}$$
+
 a) **In einer gegebenen Population leiden 2 % aller Menschen an einer bestimmten Krankheit. Ein Test habe die Eigenschaft, dass er bei Kranken in 95 % und bei Gesunden in 99 % aller Fälle die richtige Diagnose stellt. Wie groß ist die Wahrscheinlichkeit dafür, dass eine Person, bei der auf Grund des Tests die Krankheit (nicht) diagnostiziert wird, auch tatsächlich (nicht) an dieser Krankheit leidet?**
 
 |   | Krank | Gesund |
@@ -91,14 +93,46 @@ a) **In einer gegebenen Population leiden 2 % aller Menschen an einer bestimmten
 | Neg | 0.001 | 0.9702 |
 
 
-b) **Etwa 5 von 100 Männern und etwa 25 von 10 000 Frauen sind farbenblind. Eine farben- blinde Person werde zufällig ausgewählt. Wie groß ist die Wahrscheinlichkeit, dass diese Person ein Mann ist?**
+b) **Etwa 5 von 100 Männern und etwa 25 von 10 000 Frauen sind farbenblind. Eine farbenblinde Person werde zufällig ausgewählt. Wie groß ist die Wahrscheinlichkeit, dass diese Person ein Mann ist?**
 
-c) **Gegeben seien zwei Urnen. Urne 1 enthalte zwei weiße und eine rote Kugel, Urne 2 eine weiße und zwei rote. Es werde zuerst zufällig eine Kugel aus Urne 1 gezogen und in Urne 2 gelegt. Anschließend wird zufällig eine Kugel aus der Urne 2 gezogen. Angenommen, die aus Urne 2 gezogene Kugel sei rot: Wie groß ist die Wahrscheinlichkeit, dass die aus Urne 1 in Urne 2 überführte Kugel weiß war?**
+|   | Mann | Frau |
+| --- | --- | --- |
+| FBlind | 0.025 | 0.00125 |
+| Norm | 0.475 | 0.49875 |
+|  | 0.5 | 0.5 |
+
+$P(\text{Mann unter Farbenblinden})= \frac{0.025}{0.025+0.00125} = 0.9523...$
+
+c) **Gegeben seien zwei Urnen. Urne 1 enthalte zwei weiße und eine rote Kugel, Urne 2 eine weiße und zwei rote. Es werde zuerst zufällig eine Kugel aus Urne 1 gezogen und in Urne 2 gelegt. Anschließend wird zufällig eine Kugel aus der Urne 2 gezogen.**
+
+**Angenommen, die aus Urne 2 gezogene Kugel sei rot: Wie groß ist die Wahrscheinlichkeit, dass die aus Urne 1 in Urne 2 überführte Kugel weiß war?**
+
+$A: $Es wurde eine weiße Kugel aus Urne 1 in 2 gelegt
+
+$P(A) = \frac23$
+
+$B: $Es wurde ROT aus Urne 2 gezogen
+
+$P(B|A) = \frac12$
+
+$P(B|!A) = \frac34$
+
+$P(B) = P(B|A) * P(A) + P(B|!A) * P(!A)$
+$= \frac12 * \frac23 + \frac34 * \frac13$
+$= \frac26 + \frac14 = \frac{7}{12}$
+
+$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
+$= \frac{\frac12 * \frac23}{\frac{7}{12}}$
+$= \frac47 = 0.5714...$
+
 
 ---
 ## Aufgabe 26 Ameisenkolonieoptimierung
 
 a) **Zeigen Sie am Beispiel des Doppelbrückenexperiments, dass die Ameisen nicht den kürzesten Pfad finden, wenn Sie nur auf dem Hinweg zur Futterquelle oder auf dem Rückweg von der Futterquelle Pheromon ablegen!**
 
+Wenn die langsamere Ameise beim Futter ankommt dann ist nicht der kürzere Rückwege stärker pheromonisiert, sondern der eigene Weg -> tilt!
+
 
 b) **Zeigen Sie am Beispiel des Doppelbrückenexperiments, dass die Ameisen, wenn sie mit einem Gedächtnis ausgestattet werden, das es ihnen erlaubt, ihren Weg vom Nest zur Futterquelle zurückzuverfolgen (backtrace), auch dann den kürzesten Pfad finden, wenn Sie nur auf dem Rückweg Pheromon ablegen!**
+Wenn noch kein Pheromon ausgelegt ist, dann sprühe und gehe den eigenen Weg zurück, ansonsten dem ausgesprühtem Weg folgen.
