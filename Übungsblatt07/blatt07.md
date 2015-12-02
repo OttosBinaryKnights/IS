@@ -6,7 +6,9 @@ a) **Vier Kugeln werden der Reihe nach auf vier Kästen verteilt, wobei alle $4
 * Die ersten Beiden in verschiedene Kästen: $\frac34$
 * dritte Kugel in eines der BEIDEN belegten Kästchen $\frac24$
 * vierte Kugel ins doppelt belegte Kästchen $\frac14$
-$$\frac34 * \frac24* \frac14 = \frac{6}{64}$$
+$P(A \cap B) = \frac34 * \frac24* \frac14 = \frac{6}{64}$
+
+$P(B|A) = \frac{P(A\capB)}{P(A)} = \frac18$
 
 b) **Über eine bestimmte Familie sei bekannt, dass sie zwei Kinder hat. Wie groß ist die Wahrscheinlichkeit, dass beide Kinder Mädchen sind, wenn bekannt ist, dass mindestens ein Kind ein Mädchen ist?**
 
@@ -15,10 +17,16 @@ b) **Über eine bestimmte Familie sei bekannt, dass sie zwei Kinder hat. Wie gr
 $$X: \text{Beide Kinder Maedchen}$$
 $P(X) = 50$%
 
+*kommt auf Interpreatation der Aufgabe an:*
+
+ * nur Richtig wenn Reihenfolge der Kinder egal, sonst angeblich $ \frac13$
+
 c) **Wie groß ist die Wahrscheinlichkeit in Teilaufgabe b), wenn bekannt ist, dass das jüngere Kind ein Mädchen ist?**
 
 ändert sich nichts?
-$P(X) = 50$%
+$P(X) = 50$% (unabhängig?!)
+
+formal: $P(B|A) = \frac14 / \frac12 = 0.5$
 
 ---
 ## Aufgabe 24 Stochastische Unabhängigkeit
