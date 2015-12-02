@@ -95,11 +95,13 @@ $$P(A|B) = \frac{P(A \cap B)}{P(A)} = \frac{P(B|A)P(A)}{P(B)}$$
 
 a) **In einer gegebenen Population leiden 2 % aller Menschen an einer bestimmten Krankheit. Ein Test habe die Eigenschaft, dass er bei Kranken in 95 % und bei Gesunden in 99 % aller Fälle die richtige Diagnose stellt. Wie groß ist die Wahrscheinlichkeit dafür, dass eine Person, bei der auf Grund des Tests die Krankheit (nicht) diagnostiziert wird, auch tatsächlich (nicht) an dieser Krankheit leidet?**
 
-|   | Krank | Gesund |
+|   | Krank K | Gesund !K |
 | --- | --- | --- |
-| Pos | 0.019 | 0.0098 |
-| Neg | 0.001 | 0.9702 |
+| Pos T | 0.019 | 0.0098 |
+| Neg !T | 0.001 | 0.9702 |
 
+$P(!K|!T) = \frac{P(!K|!T) P(!K)}{P(!T)} 0.999$
+$P(K|T) = \frac{P(T|K) P(K)}{P(T)} = 0.6597$
 
 b) **Etwa 5 von 100 Männern und etwa 25 von 10 000 Frauen sind farbenblind. Eine farbenblinde Person werde zufällig ausgewählt. Wie groß ist die Wahrscheinlichkeit, dass diese Person ein Mann ist?**
 
