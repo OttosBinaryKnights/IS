@@ -64,6 +64,24 @@ $$T_n=\{0=\frac{0}{n-1}, \frac{1}{n-1}, \frac{2}{n-1}, ..., \frac{n-2}{n-1}, \fr
 a) **Alex ist sich sicher, dass gilt: „Wenn ich einen blauen Panzer erhalte und einen Turbo Pilz einsetzen kann, dann werde ich gewinnen.“
 Stellen sie den im Text beschriebenen Ausdruck für B (blauer Panzer), T (Turbo Pilz) und A (Alex gewinnt) auf. Berechnen sie anschließend die Wahrheitswerte für alle Kom- binationen von T3 der logischen Variablen B, T und A.**
 
+Werte bei 3-Wertiger Logik: {0,0.5,1}
+
+Ausdruck: $$ (B \land T) \rightarrow A$$
+
+Wertetabelle aufgeteilt in $$ B\land T$$
+
+3^2 Möglichkeiten, dann 2. Wertetabelle für 3^2 Möglichkeiten, ergibt wieder nur 9.
+27 Möglichkeiten ausgezählt.
+4 \* 0; 1 \* 0.5; 22 \* 1
+
+
 b) **Christian und Christoph sind der Meinung, dass dieser Ausdruck viel zu einfach sei und geben folgende Alternative an.**
 $$((B \rightarrow A)\land (T \rightarrow A))\land (B \land T).$$
 **Berechnen sie erneut die Wahrheitswerte für alle Kombinationen von $T_3$ der logischen Variablen B, T und A.**
+
+3 Wertetabellen für jedes einzelne Konjunkt erstellt (jeweils 3^2 Möglichkeiten)
+da diese verundet werden gibt es 3^2 * 3^2 * 3^2 Möglichkeiten, dh 729 Möglichkeiten.
+
+533 \* 0; 124 \* 0.5; 72 \* 1
+
+Man erkennt spätestens hier, dass b) eine andere Aussage ist als a, allein schon anhand der Verteilung von 0; 0.5; 1
