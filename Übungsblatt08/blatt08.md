@@ -5,6 +5,43 @@
 **Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte (x1,x2) innerhalb des in der nebenstehen- den Skizze gezeigten grau markierten Bereichs den Wert 1 und für Punkte außerhalb den Wert 0 liefert!**
 ![Abbildung](Abbildung1.png)
 
+
+Idee: Geradengleichungen bzw. Normalen.
+1. Schritt großes Dreieck modellieren
+2. Schritt weißes Dreieck ausschneiden
+
+1. Schritt 3 Geradengleichungen bzw. Normalenvektoren:
+Gerade 1: Normale (0/1) ablesbar
+Gerade 2:  von P(0/0) nach P(2/4) --> x*(2/4) --> Normale (2/-1)
+Gerade 3: von P(2/4) nach P(4/0) --> x*(2/-4) + (0/8) --> Normale (-2/-1)
+y-Achsenabschnitt war 8 (wichtig für Schwellwertelement)
+
+Netz modellieren mit wij mit i = gerade und j = 1 für x1 und j = 2 für x2
+
+w11 = 0; w12 = 1; Theta = 0
+w21 = 2; w22 = -1; Theta = 0 (kein yAchsenabschnitt bei 2. Gerade)
+w31 = -2; w32 = -1; Theta = -8
+
+Alle 3 Neuronen verbindent mit Gewicht 1 zu zweiter Schicht und Theta = 3
+
+2. Schritt: Weißes Dreieck ausschneiden, wieder 3 Geraden
+
+Gerade 1: Normale (0/-1) ablesbar --> (0/2) Y-Achsenabschnitt
+Gerade 2: von P(1/2) nach P(2/0) --> x*(1/-2) + (0/4) --> Normale (2/1) y-Achsenabschnitt 4
+Gerade 3: von P(2/0) nach P(3/2) --> x*(1/2) + (0/-4) Y-Achsenabschnitt -4
+
+Das heißt nun Netz wie folgt mit Notation aus 1. Schritt:
+w11 = 0; w12 = -1; Theta = -2
+w21 = 2; w22 = 1; Theta = 4
+w31 = -2; w32 = 1; Theta = -4
+
+Diese 3 Neuronen verbindet mit Gewicht 1 zu einem Neuron mit Theta = 3 und von diesem Neuron nun  mit Gewicht -1 (für ausschneiden, wenn Punkt in dem weißen Dreieck) an das Neuron in der 2. Schicht vom großen Dreieck.
+
+8 Neuronen, 3 jeweils für die 3 Geraden, 1 für die Bildung des weißen 3-ecks und 1 für graues Dreieck und ausschneiden des weißen Dreiecks.
+
+
+
+
 ---
 ## Aufgabe 2 Die Zwerge und die Wahrscheinlichkeitsrechnung
 **Die Berichte des kleinen Hobbits Bilbo und seiner Gefolgschaft wurden in den letzten Jahren zahlreich wiedergegeben. Viele kennen die Zwerge als Gemeinschaft, denn von ihren Streitig- keiten wurde nur selten berichtet. So kam es, das die sich sonst so einigen Bifur, Bofur und Bombur in einen Streit um das letzte Fass Bier gerieten.**
