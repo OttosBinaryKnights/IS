@@ -8,7 +8,7 @@ a) **Vier Kugeln werden der Reihe nach auf vier Kästen verteilt, wobei alle $4^
 * vierte Kugel ins doppelt belegte Kästchen $\frac14$
 $P(A \cap B) = \frac34 * \frac24* \frac14 = \frac{6}{64}$
 
-$P(B|A) = \frac{P(A\capB)}{P(A)} = \frac18$
+$P(B|A) = \frac{P(A\cap B)}{P(A)} = \frac18$
 
 b) **Über eine bestimmte Familie sei bekannt, dass sie zwei Kinder hat. Wie groß ist die Wahrscheinlichkeit, dass beide Kinder Mädchen sind, wenn bekannt ist, dass mindestens ein Kind ein Mädchen ist?**
 
@@ -17,7 +17,6 @@ b) **Über eine bestimmte Familie sei bekannt, dass sie zwei Kinder hat. Wie gro
 $$X: \text{Beide Kinder Maedchen}$$
 $P(X) = 50$%
 
-<<<<<<< HEAD
 *kommt auf Interpreatation der Aufgabe an:*
 
  * nur Richtig wenn Reihenfolge der Kinder egal, sonst angeblich $ \frac13$
