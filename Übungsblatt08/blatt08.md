@@ -37,7 +37,11 @@ w31 = -2; w32 = 1; Theta = -4
 
 Diese 3 Neuronen verbindet mit Gewicht 1 zu einem Neuron mit Theta = 3 und von diesem Neuron nun  mit Gewicht -1 (für ausschneiden, wenn Punkt in dem weißen Dreieck) an das Neuron in der 2. Schicht vom großen Dreieck.
 
-8 Neuronen, 3 jeweils für die 3 Geraden, 1 für die Bildung des weißen 3-ecks und 1 für graues Dreieck und ausschneiden des weißen Dreiecks.
+8 Neuronen, 3 jeweils für die 3 Geraden, 1 für die Bildung des weißen 3-ecks und 1 für graues Dreieck und ausschneiden des weißen Dreiecks. 
+
+PROBLEM: Die Eckpunkte vom weißen 3-eck wären nun 0 und nicht 1. Lösung morgen.
+
+Alternativ: alle 3 Dreiecke einzeln und dann nur die doppelten Punkte (Eckpunkte) abziehen
 
 
 
