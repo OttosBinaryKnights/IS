@@ -50,6 +50,27 @@ Diese 3 Neuronen verbindet mit Gewicht 1 zu einem Neuron mit Theta = 3 und von d
 
 **Die drei einigten sich nacheinander zuzuschlagen. Wer einmal getroffen wurde scheidet sofort aus. In der Reihenfolge Bifur, Bofur, Bombur, Bifur, ... konnten sie nun wählen wen sie jeweils angreifen. Was wäre die beste Strategie für Bifur, wenn Bofur und Bombur jeweils den verbleibenden Zwerg mit der höchsten Zielgenauigkeit angreifen würden? Wie hoch ist Bifurs Chance zu gewinnen?**
 
+1. Strategie Immer auf Stärkeren:
+
+  habe Baum aufgezeichnet und kam auf folgende Formel:
+
+  $P(\text{"Bifur Gewinn wenn immer auf den Starkeren"})$ $= \sum_{i=0}^{\inf} (\frac12 * \frac13)^i * \frac13$
+  $+ \sum_{i=1}^{\inf} (\frac12 * \frac13)^i * \frac23$
+  $+ \frac23 * \frac12 * \frac13 $
+
+  $= \sum_{i=1}^{\inf} (\frac12 * \frac13)^i * (\frac13 +\frac23)+ \frac19$
+
+  $= \sum_{i=1}^{\inf} \frac16^i + \frac19$
+
+  $= \frac15 + \frac19$
+
+  $= \frac {14}{35}$
+
+2. Strategie Immer auf Schwächeren:
+  $P(\text{"Bifur Gewinn wenn immer auf den Schwachen"})$ $= \sum_{i=1}^{\inf} (\frac12 * \frac23)^i * \frac13$
+  $+ \frac23 * \frac12 * 1 * \frac13 $
+  $= \sum_{i=1}^{\inf} (\frac13)^i * \frac13 + \frac19 $
+  $= \frac12 * \frac13 + \frac19 = \frac16 + \frac19 = \frac5{18}$
 ---
 ## Aufgabe 3 Mario Kart und Mehrwertige Logiken
 **Betrachten Sie die n-wertigen Logiken $L_n(n\leq 2)$ mit den Wahrheitswerten**
