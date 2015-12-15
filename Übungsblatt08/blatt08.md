@@ -39,7 +39,7 @@ Diese 3 Neuronen verbindet mit Gewicht 1 zu einem Neuron mit Theta = 3 und von d
 
 8 Neuronen, 3 jeweils für die 3 Geraden, 1 für die Bildung des weißen 3-ecks und 1 für graues Dreieck und ausschneiden des weißen Dreiecks. 
 
-PROBLEM: Die Eckpunkte vom weißen 3-eck wären nun 0 und nicht 1. Lösung morgen.
+PROBLEM: Die Eckpunkte vom weißen 3-eck wären nun 0 und nicht 1. Lösung: andere Aktivierungsfunktion für die Punkte (Radiale Basisfuntkion mit Radius 0) wird aber in IS nicht genutzt, von daher Schwamm drüber und nicht beachten dieses Problem.
 
 Alternativ: alle 3 Dreiecke einzeln und dann nur die doppelten Punkte (Eckpunkte) abziehen
 
