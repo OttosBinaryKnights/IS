@@ -5,7 +5,7 @@
 **Geben Sie ein neuronales Netz aus Schwellenwertelementen an, das für Punkte (x1,x2) innerhalb des in der nebenstehen- den Skizze gezeigten grau markierten Bereichs den Wert 1 und für Punkte außerhalb den Wert 0 liefert!**
 ![Abbildung](Abbildung1.png)
 
-
+FALSCHE LÖSUNG. 3 Dreiecke machen ist korrekt, diese kombinieren auf 3. Schicht und Theta = 1, da egal welches Dreieck unser Neuronales Netz feuert.
 Idee: Geradengleichungen bzw. Normalen.
 1. Schritt großes Dreieck modellieren
 2. Schritt weißes Dreieck ausschneiden
