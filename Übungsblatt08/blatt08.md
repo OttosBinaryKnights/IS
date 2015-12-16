@@ -37,11 +37,7 @@ w31 = -2; w32 = 1; Theta = -4
 
 Diese 3 Neuronen verbindet mit Gewicht 1 zu einem Neuron mit Theta = 3 und von diesem Neuron nun  mit Gewicht -1 (für ausschneiden, wenn Punkt in dem weißen Dreieck) an das Neuron in der 2. Schicht vom großen Dreieck.
 
-8 Neuronen, 3 jeweils für die 3 Geraden, 1 für die Bildung des weißen 3-ecks und 1 für graues Dreieck und ausschneiden des weißen Dreiecks. 
-
-PROBLEM: Die Eckpunkte vom weißen 3-eck wären nun 0 und nicht 1. Lösung: andere Aktivierungsfunktion für die Punkte (Radiale Basisfuntkion mit Radius 0) wird aber in IS nicht genutzt, von daher Schwamm drüber und nicht beachten dieses Problem.
-
-Alternativ: alle 3 Dreiecke einzeln und dann nur die doppelten Punkte (Eckpunkte) abziehen
+8 Neuronen, 3 jeweils für die 3 Geraden, 1 für die Bildung des weißen 3-ecks und 1 für graues Dreieck und ausschneiden des weißen Dreiecks.
 
 
 
@@ -58,23 +54,18 @@ Alternativ: alle 3 Dreiecke einzeln und dann nur die doppelten Punkte (Eckpunkte
 
   habe Baum aufgezeichnet und kam auf folgende Formel:
 
-  $P(\text{"Bifur Gewinn wenn immer auf den Starkeren"})$ $= \sum_{i=0}^{\inf} (\frac12 * \frac13)^i * \frac13$
-  $+ \sum_{i=1}^{\inf} (\frac12 * \frac13)^i * \frac23$
+  $P(\text{"Bifur Gewinn wenn immer auf den Starkeren"})$ $= \sum_{i=0}^{\inf} (\frac12 * \frac23)^i * \frac1{18}$
+  $+ \sum_{i=1}^{\inf} (\frac12 * \frac23)^i * \frac13$
   $+ \frac23 * \frac12 * \frac13 $
+  $= \frac1{12} + \frac16$
+  $+ \frac19 $
+  $ = \frac{13}{36}$
 
-  $= \sum_{i=1}^{\inf} (\frac12 * \frac13)^i * (\frac13 +\frac23)+ \frac19$
 
-  $= \sum_{i=1}^{\inf} \frac16^i + \frac19$
+  Richtig:
 
-  $= \frac15 + \frac19$
+  Absichtlich erste Runde nicht treffen. Dann so ca. 46,15%
 
-  $= \frac {14}{35}$
-
-2. Strategie Immer auf Schwächeren:
-  $P(\text{"Bifur Gewinn wenn immer auf den Schwachen"})$ $= \sum_{i=1}^{\inf} (\frac12 * \frac23)^i * \frac13$
-  $+ \frac23 * \frac12 * 1 * \frac13 $
-  $= \sum_{i=1}^{\inf} (\frac13)^i * \frac13 + \frac19 $
-  $= \frac12 * \frac13 + \frac19 = \frac16 + \frac19 = \frac5{18}$
 ---
 ## Aufgabe 3 Mario Kart und Mehrwertige Logiken
 **Betrachten Sie die n-wertigen Logiken $L_n(n\leq 2)$ mit den Wahrheitswerten**
@@ -86,8 +77,8 @@ $$T_n=\{0=\frac{0}{n-1}, \frac{1}{n-1}, \frac{2}{n-1}, ..., \frac{n-2}{n-1}, \fr
 
 **Christian, Christoph und Alex spielen eine Party Mario-Kart. Nach vielen Runden sind sie sich unsicher unter welchen Bedingungen einer von ihnen gewinnt. Folgende Beziehungen lassen sich aufstellen:**
 
-a) **Alex ist sich sicher, dass gilt: „Wenn ich einen blauen Panzer erhalte und einen Turbo Pilz einsetzen kann, dann werde ich gewinnen.“
-Stellen sie den im Text beschriebenen Ausdruck für B (blauer Panzer), T (Turbo Pilz) und A (Alex gewinnt) auf. Berechnen sie anschließend die Wahrheitswerte für alle Kom- binationen von T3 der logischen Variablen B, T und A.**
+a) **Alex ist sich sicher, dass gilt: „Wenn ich einen blauen Panzer erhalte und einen Turbo Pilz einsetzen kann, dann werde ich gewinnen.“**
+**Stellen sie den im Text beschriebenen Ausdruck für B (blauer Panzer), T (Turbo Pilz) und A (Alex gewinnt) auf. Berechnen sie anschließend die Wahrheitswerte für alle Kombinationen von T3 der logischen Variablen B, T und A.**
 
 Werte bei 3-Wertiger Logik: {0,0.5,1}
 
