@@ -3,6 +3,8 @@
 *Auf dem 2. Übungsblatt haben wir gesehen, dass man für einen reinen Stimulus-Response- Agenten kein Regelsystem angeben kann, das ihn den Umriss eines Objektes oder des Raumes abfahren lässt, wenn es „enge Zwischenräume“ gibt, d.h. Zwischenräume zwischen einer Wand und einem Objekt oder zwischen zwei Objekten, die nur ein Feld breit sind.
 Agenten mit inneren Zuständen können dagegen auch in Gitterwelten mit engen Zwischenräumen ihre Aufgabe erfüllen. Definieren Sie geeignete innere Zustände und geben Sie ein Regelsystem für einen solchen Agenten an!*
 
+(-->sol6.pdf Aufgabe 20)
+
 ---
 ## Aufgabe 28 Zustandsautomaten: Türme von Hanoi
 *Das Problem der Türme von Hanoi ist sicherlich aus einer der Grundvorlesungen bekannt. Auf einem von drei Stäben liegt eine Anzahl verschieden großer Scheiben, jede Scheibe auf der nächstgrößeren. Diese Scheiben sollen auf einen anderen der Stäbe umgelagert werden (wobei der dritte Stab als Zwischenlager dienen kann), ohne dass die folgenden Bedingungen verletzt werden:*
